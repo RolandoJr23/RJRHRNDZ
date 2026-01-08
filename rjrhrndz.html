@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/images/RJR.png">
+
+    <!-------------------------------------------- Style Links --------------------------------------------->
+    <link rel="stylesheet" href="/Css/rjrhrndz.css">
+
+    <!-------------------------------------------- Link Font Awesome Some Icons -------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=code" />
+
+    <!----------------------------------------------- Title ------------------------------------------------>
+    <title>RJRHRNDZ</title>
+
+</head>
+<body>
+    <!------------------------------------------ navigation bar -------------------------------------------->
+    <nav>
+        <h1><span>RJR</span>HRNDZ</h1>
+        <ul>
+            <a href="#header">HOME</a>
+            <a href="#Aboutme">ABOUT ME</a>
+            <a href="#myprojects">PROJECTS</a>
+            <a href="#contacts">CONTACTS</a>
+            <span class="nav-item">
+                <a href="/resume/Resume.pdf" id="resumeicon" download><i class="fa-solid fa-file"></i></a>
+            <span class="tooltip-resume">Resume</span>
+            </span>
+        </ul>
+        <button class="navicon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <!----------------------------------------------- Header ----------------------------------------------->
+    <header id="header">
+        <img class="mypic" src="/images/mypic.png" alt="">
+        <div class="wrappersonalinfo">
+            <h1 class="quote">BE <span id="auto-typed"></span></h1>
+            <h1 class="myname">HERNANDEZ JR., ROLANDO BADILLO</h1>
+            <h2 class="mycourse">Bachelor of Science in Computer Science</h2>
+            <h2 class="passionate">Passionate in <span id="auto-typed-passionate"></span></h2>
+        </div>
+    </header>
+
+    <!------------------------------------------------ Main ------------------------------------------------>
+    <main>
+        <!-- AboutMe -->
+        <div id="Aboutme">
+            <h1>About ME</h1>
+            <h3>I'm a Passionate in Computer Science with focus in Build Software Solution and solve the Real World Problems. For Better Future and Tomorrow.</h3>
+            
+            <!-- Aside -->
+            <aside>
+                <!-- My Journey -->
+                <div id="myjourney">
+                    <h2>My Journey</h2>
+                    <h3>The start of my career was admittedly difficult, not knowing how to start in the tech industry after school, but I'm not saying it was a bad for me in my career, being off the path to follow as a Computer Science graduate. I learned a lot in life and learned what needed to learn in life. Being off the path became my motivation to be better in life and to build Software Solutions and solve real world problems. </h3>
+                </div>
+                <!-- My Approach -->
+                <div id="myapproach">
+                    <h2>My Approach</h2>
+                    <h3>The start of my career was admittedly difficult, not knowing how to start in the tech industry after school, but I'm not saying it was a bad for me in my career, being off the path to follow as a Computer Science graduate. I learned a lot in life and learned what to learn in life. Being off the path became my motivation to be better in life and to build Software Solutions and solve real world problems. </h3>
+                </div>
+            </aside>
+
+        </div>
+        <!-------------------- Core Competencies -------------------->
+        <div id="corecompetencies">
+            <h1>Core Competencies</h1>
+            
+            <!---------- Core Boxes ---------->
+            <div id="core">
+                <div class="corebox">
+                    
+                    <h1><span class="material-symbols-outlined">code</span>Frontend Development</h1>
+                    <h3>Building responsive and intuitive user interfaces using modern frameworks like React, Vue and Angular.</h3>
+                </div>
+                <div class="corebox">
+                    <h1><i class="fa-solid fa-server"></i>Backend Development</h1>
+                    <h3>Developing robust server-side applications using Node.js, Python, Java and Database systems.</h3>
+                </div>
+                <div class="corebox">
+                    <h1><i class="fa-solid fa-book"></i>Data Structures & Algorithms</h1>
+                    <h3>Strong foundation in computer science principles with expertise in efficient problem-solving</h3>
+                </div>
+                <div class="corebox">
+                    <h1><i class="fa-solid fa-user"></i>UI/UX Design</h1>
+                    <h3>Focusing and creating user-centric designs to ensuring that the finished result is understandable, reachable, and indeed helpful for best experience.</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <!-------------------- My All Projects -------------------->
+        <div id="myprojects">
+            <h1>My Projects</h1>
+            <h2>Explore my featured work and side projects</h2>
+            <!-- Project Boxes -->
+            <div id="projectbox">
+                
+            </div>
+        </div>
+
+        <!-------------------- Contacts -------------------->
+        <div id="contacts">
+            <h1>Get in Touch</h1>
+            <h2>Have a question or want to work together? Reach out to me.</h2>
+            <!-- Form -->
+            <form>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="subject" id="subj" name="subject" placeholder="Message Subject" style="width: 94%;" required>
+                <textarea name="message" id="message" required rows="10" cols="96" placeholder="Your Message"></textarea>
+                <button type="submit"><i class="fa-solid fa-location-arrow"></i>Send Message</button>
+            </form>
+            <!---------- Contact Us Details---------->
+            <section id="contactdetails">
+                <div class="socialmedia">
+                    <h1>Connect with Me</h1>
+                    <h3>Follow me on social media to see my latest projects and updates.</h3>
+                    <div class="mediaicon">
+                        <a href="https://github.com/RolandoJr23" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/rolando-jr-hernandez-1a3772330?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNIMedTBfQguj8c9NXI6uZw%3D%3D" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/invites/contact/?igsh=1rgwwp3xtfjif&utm_content=107jhdm4" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Email Address -->
+                <section class="emailaddress">
+                    <div class="email">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div class="wrapboxemail">
+                        <label for="email">Email</label>
+                        <a href="mailto:rolanojrhernandez0623200@gmail.com" id="email">rolandojrhernandez0623200@gmail.com</a>
+                    </div>
+                </div>
+                <!-- Location -->
+                <div class="location">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <div class="wrapboxlocation">
+                        <label for="text">Location</label>
+                        <a href="https://maps.app.goo.gl/H5asLNY8vL2wPdty5" target="_blank"><h3>San Antonio Santo Tomas City, Batangas</h3></a>
+                    </div>
+                </div>
+                </section>
+            </section>
+         </div>
+    </main>
+
+    <!------------------------------------------------ Footer ------------------------------------------------>
+    <footer>
+        <h1> &copy; 2026 RJRHRNDZ. All rights reserved.</h1>
+    </footer>
+
+</body>
+
+
+<!------------------------------------------------JavaScript Codes------------------------------------------------>
+
+<!-- Javascript External Links -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="/Javascript/projects.js"></script>
+<script src="/Javascript/rjrhrndz.js"></script>
+
+<!------------------------------JavaScript Code for Header Quotes, Name and Course Auto Typed------------------------------>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#auto-typed', {
+    strings: ['BRAVE', 'UNIQUE', 'ACCEPTABLE', 'MINDFUL', 'YOU.'],
+    typeSpeed: 150,
+    backSpeed: 200,
+    loop: true
+});
+</script>
+<script>
+    var typed = new Typed('#auto-typed-passionate', {
+    strings: ['SOFTWARE ENGINEER', 'AI ENGINEER', 'FULL STACK DEV', 'AUTOMATION DEV', 'MACHINE LEARNING', 'DATA SCIENCE', 'DATA ANALYST'],
+    typeSpeed: 150,
+    backSpeed: 200,
+    loop: true
+});
+</script>
+</html>

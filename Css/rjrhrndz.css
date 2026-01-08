@@ -1,0 +1,1695 @@
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --text-color: white;
+    --top-content: #2F4F4F;
+    --body-content: #778899;
+    --footer-content: #000000;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+    list-style: none;
+}
+
+/************************************Scroll Behavior Smooth************************************/
+html{
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 5rem);
+}
+
+/************************************ScrollBar Change Color************************************/
+::-webkit-scrollbar{
+    width: 0.9rem;
+    background-color: rgb(34, 40, 49);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(49, 54, 63);
+    transition: .5s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border: 1px solid rgb(118, 171, 174);
+    background-color: var(--top-content);
+}
+
+/************************************Navigation************************************/
+body nav{
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    height: 100px;
+    z-index: 100;
+    background-color: var(--top-content);
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0px 0px 10px 0px white; */
+    /* box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1); */
+    transition: all 80ms ease-out;
+}
+
+body nav.scrolled{
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+}
+/**********LOGO**********/
+body nav h1{
+    cursor: default;
+    font-family: 'Nata Sans';
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+    margin-left: 200px;
+    transition: .3s;
+}
+body nav h1 span{
+    color: white;
+    filter: drop-shadow( 1px 1px 3px white);
+}
+body nav h1:hover{
+    transform: scale(1.1);
+    /* filter: drop-shadow( 1px 1px 3px white); */
+}
+
+/**********Navigation Unordered List**********/
+body nav ul{
+    position: absolute;
+    width: 50%;
+    height: 70px;
+    right: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/**********Navigation Links**********/
+body nav ul a{
+    font-family: 'Nata Sans';
+    font-weight: 400;
+    font-size: 1.5rem;
+    filter: drop-shadow(1px 1px 3px white); 
+    text-decoration: none;
+    color: var(--text-color);    
+    height: 40px;
+    position: relative;
+}
+body nav ul a::after{
+    position: absolute;
+    content: '';
+    background-color: white;
+    border-radius: 30px;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+}
+body nav ul a:hover::after{
+    width: 100%;
+}
+
+body nav ul .nav-item{
+    position: relative;
+    width: 30px;
+    height: 40px;
+}
+
+body nav ul .nav-item #resumeicon{
+    display: block;
+}
+
+.nav-item:hover .tooltip-resume{
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip-resume{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -60%;
+    top: 55px;
+    border: 1px solid var(--top-content);
+    padding: 4px 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--top-content);
+    font-family: 'Nata Sans';
+    transition: opacity .3s linear;
+}
+
+.tooltip-resume::before{
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    top: -19px;
+    left: 30%;
+    border-color: transparent transparent white;
+}
+
+body nav .navicon{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 100px;
+    display: none;
+}
+body nav .navicon .fa-bars{
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+
+body nav .navicon .fa-bars:hover{
+    filter: drop-shadow(1px 1px 3px white);
+}
+
+/************************************Header************************************/
+body header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    height: 990px;
+    position: relative;
+    background-color: var(--top-content);
+    transform: -50%;
+    opacity: 0;
+    transition: 800ms ease;
+}
+body header.show{
+    transform: 0%;
+    opacity: 1;
+}
+
+
+/**********My Photo**********/
+body header .mypic{
+    position: absolute;
+    width: 600px;
+    right: 30px;
+    bottom: 0;
+    /* border: 1px solid red; */
+}
+
+body header .wrappersonalinfo{
+    max-width: 60%;
+    height: 620px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+/**********My Quote**********/
+body header .wrappersonalinfo .quote{
+    color: var(--text-color);
+    font-size: 7.5rem;
+    font-family: 'Nata Sans';
+    font-weight: 400;
+    filter: drop-shadow(1px 1px 10px white);
+    margin-bottom: 100px;
+}
+
+/**********My Name**********/
+body header .wrappersonalinfo .myname{
+    color: var(--text-color);
+    font-size: 4rem;
+    font-family: 'Nata Sans';
+    font-weight: 300;
+    filter: drop-shadow(1px 1px 5px white);
+}
+
+/**********My Course**********/
+body header .wrappersonalinfo .mycourse{
+    color: var(--text-color);
+    font-size: 2.2rem;
+    font-family: 'Nata Sans';
+    font-weight: 200;
+    filter: drop-shadow(1px 1px 3px white);
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+/**********Passionate**********/
+body header .wrappersonalinfo .passionate{
+    color: var(--text-color);
+    font-size: 3.3rem;
+    font-family: 'Nata Sans';
+    font-weight: 200;
+}
+body header .wrappersonalinfo .passionate span{
+    filter: drop-shadow(1px 1px 5px white);
+}
+
+
+
+/************************************Main**********************************/
+body main{
+    max-width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/**********About Me**********/
+body main #Aboutme{
+    max-width: 80%;
+    height: 500px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding-top: 30px;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 1000ms ease;
+}
+body main #Aboutme.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+body main #Aboutme h1{
+    font-family: 'Nata Sans';
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--top-content);
+    margin-bottom: 20px;
+}
+body main #Aboutme h3{
+    font-family: 'Nata Sans';
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--top-content);
+}
+
+body main #Aboutme aside{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid grey; */
+    /* transition-delay: 300ms; */
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 800ms ease;
+}
+body main #Aboutme aside.show{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+/**********My Journey**********/
+body main #Aboutme aside #myjourney{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    /* border: 1px solid black; */
+}
+
+body main #Aboutme aside #myjourney h2{
+    font-family: 'Nata Sans';
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--top-content);
+}
+body main #Aboutme aside #myjourney h3{
+    font-family: 'Nata Sans';
+    font-size: 1.2rem;
+    text-align: justify;
+    color: var(--top-content);
+    margin-top: 20px;
+}
+
+/**********My Approach**********/
+body main #Aboutme aside #myapproach{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px; 
+    /* border: 1px solid black; */
+}
+body main #Aboutme aside #myapproach h2{
+    font-family: 'Nata Sans';
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--top-content);
+}
+body main #Aboutme aside #myapproach h3{
+    font-family: 'Nata Sans';
+    font-size: 1.2rem;
+    text-align: justify;
+    color: var(--top-content);
+    margin-top: 20px;
+}
+
+
+/**********Core Competencies**********/
+body main #corecompetencies{
+    max-width: 80%;
+    height: 400px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px; 
+    margin-bottom: 50px;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 800ms ease;
+}
+body main #corecompetencies.show{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+body main #corecompetencies h1{
+    font-family: 'Nata Sans';
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--top-content);
+}
+
+/**********Cores**********/
+body main #corecompetencies #core{
+    max-width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+body main #corecompetencies #core .corebox{
+    max-width: 35%;
+    height: 100px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;  
+    /* border: 1px solid red; */
+}
+body main #corecompetencies #core .corebox span{
+    font-size: 1.5rem;
+    color: var(--top-content);
+}
+body main #corecompetencies #core .corebox h1{
+    font-family: 'Nata Sans';
+    font-size: 1.5rem;
+    color: var(--top-content);
+    margin-bottom: 20px;
+}
+body main #corecompetencies #core .corebox h3{
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--top-content);
+}
+
+/**********My Projects**********/
+body main #myprojects{
+    max-width: 60%;
+    /* border: 1px solid blue;  */
+    border-radius: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 800ms ease;
+}
+body main #myprojects.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+body main #myprojects h1{
+    font-family: 'Nata Sans';
+    font-size: 3rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    filter: drop-shadow(1px 1px 3px white);
+    margin-top: 30px;
+}
+body main #myprojects h2{
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+body main #myprojects #projectbox{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+body main #myprojects .projbox{
+    width: 30%;
+    height: 450px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    /* border: 1px solid blue; */
+    transition: .5s;
+}
+body main #myprojects .projbox:hover{
+    transform: translateY(-10px);
+}
+body main #myprojects .projbox .imageproj{
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* border: 1px solid red; */
+}
+body main #myprojects .projbox .imageproj img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: .3s;
+}
+body main #myprojects .projbox .imageproj img:hover{
+    transform: scale(1.1);
+}
+body main #myprojects .projbox .details{
+    max-width: 100%;
+    height: 210px;
+    /* border: 1px solid red; */
+    position: relative;
+    padding: 20px;
+}
+
+body main #myprojects .projbox .details .title{
+    font-family: 'Nata Sans';
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--top-content);
+}
+body main #myprojects .projbox .details  .desc{
+    font-family: 'Nata Sans';
+    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--top-content);
+    --max-lines: 3;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
+
+body main #myprojects .projbox .details .fa-arrow-up-right-from-square{
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--top-content);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    padding: 30px;
+}
+
+/**********Contacts**********/
+body main #contacts{
+    max-width: 60%;
+    height: 850px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 800ms ease;
+}
+body main #contacts.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+body main #contacts h1{
+    font-family: 'Nata Sans';
+    /* font-weight: 400; */
+    font-size: 3rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+body main #contacts h2{
+    font-family: 'Nata Sans';
+    /* font-weight: 400; */
+    font-size: 1rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/**********Form Message Email**********/
+body main #contacts form{
+    max-width: 70%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    /* border: 1px solid blue; */
+}
+body main #contacts form input{
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    color: var(--top-content);
+    border-radius: 10px;
+    width: 45%;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+}
+body main #contacts form textarea{
+    width: 91%;
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    color: var(--top-content);
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    outline: none;
+}
+body main #contacts form button{
+    cursor: pointer;
+    width: 97%;
+    height: 50px;
+    background-color: var(--top-content);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+}
+
+body main #contacts #contactdetails{
+    max-width: 73%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 10px;
+    /* border: 1px solid blue; */
+    border-radius: 10px;
+}
+body main #contacts #contactdetails .socialmedia{
+    width: 50%;
+    height: 170px;
+    background-color: var(--top-content);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    /* border: 1px solid red; */
+}
+
+/**********Social Media**********/
+body main #contacts #contactdetails .socialmedia h1{
+    font-family: 'Nata Sans';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+body main #contacts #contactdetails .socialmedia h3{
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+body main #contacts #contactdetails .mediaicon{
+    width: 80%;
+    height: 50px;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+body main #contacts #contactdetails .mediaicon i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    width: 45px;
+    height: 45px;
+    align-content: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: .2s;
+}
+body main #contacts #contactdetails .mediaicon i:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 5px white);
+}
+
+/**********Email Address**********/
+body main #contacts #contactdetails .emailaddress{
+    width: 50%;
+    height: 170px;
+    background-color: var(--top-content);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 30px;
+    gap: 15px; 
+    /* border: 1px solid red; */
+}
+
+body main #contacts #contactdetails .email{
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px; */
+    /* margin-bottom: 10px; */
+    transition: .5s;
+}
+body main #contacts #contactdetails .email:hover{
+    transform: translateY(-5px);
+    filter: drop-shadow(1px 1px 5px white);
+}
+body main #contacts #contactdetails .email i{
+    font-size: 2.5rem;
+    color: var(--top-content);
+}
+
+body main #contacts #contactdetails .email .wrapboxemail{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* border: 1px solid black; */
+}
+body main #contacts #contactdetails .email .wrapboxemail label{
+    font-family: 'Nata Sans';
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    gap: 10px;
+}
+body main #contacts #contactdetails .email .wrapboxemail a{
+    text-decoration: none;
+    font-family: 'Nata Sans';
+    font-size: .9rem;
+    color: var(--top-content);
+}
+
+/**********Location**********/
+body main #contacts #contactdetails .location{
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px; */
+    transition: .5s;
+}
+body main #contacts #contactdetails .location:hover{
+    transform: translateY(-5px);
+    filter: drop-shadow(1px 1px 5px white);
+}
+body main #contacts #contactdetails .location .wrapboxlocation{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* border: 1px solid black; */
+}
+body main #contacts #contactdetails .location i{
+    font-size: 2.5rem;
+    color: var(--top-content);
+}
+body main #contacts #contactdetails .location .wrapboxlocation label{
+    font-family: 'Nata Sans';
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    gap: 10px;
+}
+body main #contacts #contactdetails .location .wrapboxlocation a{
+    text-decoration: none;
+}
+body main #contacts #contactdetails .location .wrapboxlocation a h3{
+    cursor: pointer;
+    font-family: 'Nata Sans';
+    font-weight: 400;
+    font-size: .8rem;
+    color: var(--top-content);
+}
+
+
+/************************************Footer************************************/
+body footer{
+    background-color: var(--top-content);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body footer h1{
+    font-family: 'Nata Sans';
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 400;
+    filter: drop-shadow(1px 1px 3px white);
+    color: white;
+}
+
+
+
+/************************************Responsive Media Query************************************/
+
+/*****************Desktop Extra Large Screen ViewSize*****************/
+@media (max-width: 1640px){
+    /**********LOGO**********/
+    body nav h1{
+        margin-left: 100px;
+    }
+
+    /**********Navigation Links**********/
+    body nav ul a{
+        font-size: 1.3rem;
+    }
+
+    /************************************Header************************************/
+    /**********My Photo**********/
+    body header .mypic{
+        width: 500px;
+        right: 0px;
+    }
+    body header .wrappersonalinfo{
+        height: 620px;
+        left: 200px;
+    }
+    /**********My Quote**********/
+    body header .wrappersonalinfo .quote{
+        font-size: 5.5rem;
+    }
+    /**********My Name**********/
+    body header .wrappersonalinfo .myname{
+        font-size: 3rem;
+    }
+    /**********My Course**********/
+    body header .wrappersonalinfo .mycourse{
+        font-weight: 200;
+    }
+    /**********Passionate**********/
+    body header .wrappersonalinfo .passionate{
+        font-size: 3rem;
+    }
+
+    /**********About Me**********/
+    body main #Aboutme{
+        height: 520px;
+    }
+    body main #Aboutme h1{
+        font-size: 2.5rem;
+    }
+    /**********My Journey**********/
+    body main #Aboutme aside #myjourney{
+        height: 290px;
+    }
+    /**********My Approach**********/
+    body main #Aboutme aside #myapproach{
+        height: 290px;
+    }
+
+    /**********Core Competencies**********/
+    body main #corecompetencies h1{
+        font-size: 2.5rem;
+    }
+    body main #corecompetencies #core .corebox h1{
+        font-size: 1rem;
+    }
+    body main #corecompetencies #core .corebox h3{
+        font-size: .8rem;
+    }
+
+    /**********My Projects**********/
+    body main #myprojects{
+        max-width: 80%;
+        /* border: 1px solid red; */
+    }
+    body main #myprojects h1{
+        font-size: 2.5rem;
+    }
+
+    body main #myprojects .projbox .details .title{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /**********Contacts**********/
+    body main #contacts{
+        max-width: 80%;
+    }
+
+    /**********Email Address**********/
+    body main #contacts #contactdetails .email i{
+        font-size: 2rem;
+    }
+    body main #contacts #contactdetails .email .wrapboxemail label{
+        font-size: 1rem;
+    }
+    body main #contacts #contactdetails .email .wrapboxemail a{
+        font-size: .8rem;
+    }
+
+    /**********Location**********/
+    body main #contacts #contactdetails .location i{
+        font-size: 2rem;
+    }
+    body main #contacts #contactdetails .location .wrapboxlocation label{
+        font-size: 1rem;
+    }
+}
+
+/*****************Desktop Screen ViewSize*****************/
+@media (max-width: 1240px){
+    /**********Navigation Links**********/
+    body nav ul a{
+        font-family: 'Nata Sans';
+        font-weight: 400;
+        font-size: 1rem;
+        filter: drop-shadow(1px 1px 3px white);
+        text-decoration: none;
+        color: var(--text-color);    
+        height: 35px;
+    }
+
+    /************************************Header************************************/
+    
+    /**********My Photo**********/
+    body header .mypic{
+        width: 500px;
+        right: 0px;
+    }
+    body header .wrappersonalinfo{
+        height: 620px;
+        left: 100px;
+    }
+    /**********My Quote**********/
+    body header .wrappersonalinfo .quote{
+        font-size: 4.5rem;
+        margin-bottom: 100px;
+    }
+    /**********My Name**********/
+    body header .wrappersonalinfo .myname{
+        font-size: 2.5rem;
+    }
+    /**********My Course**********/
+    body header .wrappersonalinfo .mycourse{
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+    /**********Passionate**********/
+    body header .wrappersonalinfo .passionate{
+        font-size: 2rem;
+    }
+
+    /**********About Me**********/
+    body main #Aboutme{
+        height: 600px;
+    }
+    /**********My Journey**********/
+    body main #Aboutme aside #myjourney{
+        height: 380px;
+    }
+    /**********My Approach**********/
+    body main #Aboutme aside #myapproach{
+        height: 380px;
+    }
+
+    /**********Core Competencies**********/
+    body main #corecompetencies h1{
+        font-size: 2.5rem;
+    }
+    body main #corecompetencies #core .corebox h1{
+        font-size: 1rem;
+    }
+    body main #corecompetencies #core .corebox h3{
+        font-size: .8rem;
+    }
+
+    /**********My Projects**********/
+    body main #myprojects{
+        max-width: 90%;
+    }
+    body main #myprojects h1{
+        font-size: 2.5rem;
+    }
+
+    body main #myprojects .projbox .details .title{
+        font-size: 1rem;
+    }
+
+    /**********Contacts**********/
+    body main #contacts{
+        max-width: 90%;
+    }
+
+}
+
+/*****************Laptop Screen ViewSize*****************/
+@media (max-width: 1080px){
+    body{
+        background-color: lightblue;
+    }
+    /************************************Navigation************************************/
+    body nav{
+        height: 80px;
+    }
+    /**********Navigation Unordered List**********/
+    body nav ul{
+        background-color: var(--top-content);
+        /* flex-direction: column; */
+        width: 100%;
+        height: 100px;
+        top: 80px;
+        right: 0;
+        overflow: hidden;
+        transition: all .8s;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+    }
+    body nav ul a{
+        color: white;
+    }
+
+    .tooltip-resume{
+        display: none;
+    }
+
+    body nav .navicon{
+        display: block;
+    }
+
+    /************************************Header************************************/
+    body header{
+        height: 600px;
+    }
+
+    /**********My Photo**********/
+    body header .mypic{
+        width: 350px;
+        right: 0px;
+    }
+    body header .wrappersonalinfo{
+        height: 300px;
+        left: 80px;
+    }
+    /**********My Quote**********/
+    body header .wrappersonalinfo .quote{
+        font-size: 3.5rem;
+        margin-bottom: 80px;
+    }
+    /**********My Name**********/
+    body header .wrappersonalinfo .myname{
+        font-size: 2rem;
+    }
+    /**********My Course**********/
+    body header .wrappersonalinfo .mycourse{
+        font-size: 1rem;
+        font-weight: 200;
+        margin-bottom: 50px;
+    }
+    /**********Passionate**********/
+    body header .wrappersonalinfo .passionate{
+        font-size: 2rem;
+    }
+
+    /**********About Me**********/
+    body main #Aboutme{
+        height: 800px;
+    }
+    body main #Aboutme h1{
+        font-size: 2rem;
+    }
+    body main #Aboutme aside{
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }   
+    /**********My Journey**********/
+    body main #Aboutme aside #myjourney{
+        height: 230px;
+    }
+    body main #Aboutme aside #myjourney h2{
+        font-size: 2rem;
+    }
+    /**********My Approach**********/
+    body main #Aboutme aside #myapproach{
+        height: 230px;
+    }
+    body main #Aboutme aside #myapproach h2{
+        font-size: 2rem;
+    }
+
+    /**********Core Competencies**********/
+    body main #corecompetencies h1{
+        font-size: 2rem;
+    }
+    body main #corecompetencies #core .corebox h1{
+        font-size: .8rem;
+    }
+    body main #corecompetencies #core .corebox h3{
+        font-size: .8rem;
+    }
+
+    /**********My Projects**********/
+    body main #myprojects{
+        max-width: 90%;
+    }
+    body main #myprojects h1{
+        font-size: 2rem;
+    }
+    body main #myprojects #projectbox{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    body main #myprojects .projbox{
+        width: 35%;
+    }
+    body main #myprojects .projbox .details .title{
+        font-size: 1rem;
+    }
+    body main #myprojects .projbox .details .desc{
+        font-size: .8rem;
+    }
+
+    /**********Contacts**********/
+    body main #contacts{
+        max-width: 90%;
+        height: 1050px;
+    } 
+    body main #contacts h1{
+        font-size: 2rem;
+    }
+
+    /**********Form Message Email**********/
+    body main #contacts form input{
+        width: 44%;
+    }
+
+    body main #contacts #contactdetails{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid blue; */
+    }
+    body main #contacts #contactdetails .socialmedia{
+        width: 92%;
+        height: 130px;
+    }
+
+    /**********Social Media**********/
+    body main #contacts #contactdetails .socialmedia h1{
+        font-size: 1rem;
+    }
+    body main #contacts #contactdetails .socialmedia h3{
+        font-size: .8rem;
+    }
+
+    /**********Email Address**********/
+    body main #contacts #contactdetails .emailaddress{
+        width: 92%;
+    }
+    body main #contacts #contactdetails .email i{
+        font-size: 2rem;
+    }
+    body main #contacts #contactdetails .email .wrapboxemail label{
+        font-size: 1rem;
+    }
+    body main #contacts #contactdetails .email .wrapboxemail a{
+        font-size: 1rem;
+    }
+
+    /**********Location**********/
+    body main #contacts #contactdetails .location i{
+        font-size: 2rem;
+    }
+    body main #contacts #contactdetails .location .wrapboxlocation label{
+        font-size: 1rem;
+    }
+    body main #contacts #contactdetails .location .wrapboxlocation a h3{
+        font-size: 1rem;
+    }
+
+    /************************************Footer************************************/
+    body footer h1{
+        font-size: 1rem;
+    }
+}
+
+/*****************Mobile/Tablet Screen ViewSize*****************/
+@media (max-width: 780px){
+    /**********LOGO**********/
+    body nav h1{
+        margin-left: 50px;
+    }
+
+    /**********Navigation Unordered List**********/
+    body nav ul a{
+        font-size: 1rem;
+    }
+
+    body nav .navicon{
+        right: 50px;
+    }
+
+    /************************************Header************************************/
+    body header{
+        height: 500px;
+    }
+
+    /**********My Photo**********/
+    body header .mypic{
+        width: 250px;
+        right: 0px;
+    }
+    body header .wrappersonalinfo{
+        height: 300px;
+        top: 50px;
+        left: 50px;
+    }
+    /**********My Quote**********/
+    body header .wrappersonalinfo .quote{
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+    /**********My Name**********/
+    body header .wrappersonalinfo .myname{
+        font-size: 1.5rem;
+    }
+    /**********My Course**********/
+    body header .wrappersonalinfo .mycourse{
+        font-size: .8rem;
+        font-weight: 200;
+        margin-bottom: 50px;
+    }
+    /**********Passionate**********/
+    body header .wrappersonalinfo .passionate{
+        font-size: 1rem;
+    }
+
+    /**********About Me**********/
+    body main #Aboutme{
+        height: 900px;
+    }
+    body main #Aboutme h1{
+        font-size: 1.5rem;
+    }
+    body main #Aboutme h3{
+        font-size: 1rem;
+    }
+    body main #Aboutme aside{
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }   
+    /**********My Journey**********/
+    body main #Aboutme aside #myjourney{
+        height: 280px;
+    }
+    body main #Aboutme aside #myjourney h2{
+        font-size: 1.5rem;
+    }
+    body main #Aboutme aside #myjourney h3{
+        font-size: 1rem;
+    }
+    /**********My Approach**********/
+    body main #Aboutme aside #myapproach{
+        height: 280px;
+    }
+    body main #Aboutme aside #myapproach h2{
+        font-size: 1.5rem;
+    }
+    body main #Aboutme aside #myapproach h3{
+        font-size: 1rem;
+    }
+
+    /**********Core Competencies**********/
+    body main #corecompetencies{
+        height: 600px;
+    }
+    body main #corecompetencies h1{
+        font-size: 2rem;
+    }
+    /**********Cores**********/
+    body main #corecompetencies #core .corebox{
+        max-width: 70%;
+        height: 100px;
+        padding: 20px;  
+        /* border: 1px solid red; */
+    }
+    body main #corecompetencies #core .corebox h1{
+        font-size: 1rem;
+    }
+    body main #corecompetencies #core .corebox h3{
+        font-size: .8rem;
+    }
+
+    /**********My Projects**********/
+    body main #myprojects{
+        max-width: 90%;
+        /* border: 1px solid red; */
+    }
+    body main #myprojects h1{
+        font-size: 2rem;
+    }
+    body main #myprojects #projectbox{
+        flex-wrap: wrap;
+        display: flex;
+        gap: 40px;
+        /* border: 1px solid red; */
+    }
+    body main #myprojects .projbox{
+        width: 50%;
+        height: 380px;
+        /* border: 1px solid red; */
+    }
+    body main #myprojects .projbox img{
+        height: 150px;
+    }
+    body main #myprojects .projbox .details .title{
+        font-size: .8rem;
+    }
+    body main #myprojects .projbox .details {
+        height: 150px;
+    }
+    body main #myprojects .projbox .details .fa-arrow-up-right-from-square{
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    /**********Contacts**********/
+    body main #contacts{
+        height: 1000px;
+    } 
+    body main #contacts h1{
+        font-size: 2rem;
+    }
+    body main #contacts h2{
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    /**********Form Message Email**********/
+    body main #contacts form input{
+        width: 41%;
+        font-size: .8rem;
+    }
+    body main #contacts form textarea{
+        font-size: .8rem;
+    }
+    body main #contacts form button{
+        font-size: .8rem;
+    }
+    body main #contacts #contactdetails .socialmedia{
+        width: 92%;
+        height: 130px;
+    }
+    /**********Social Media**********/
+    body main #contacts #contactdetails .socialmedia h1{
+        font-size: 1rem;
+    }
+    body main #contacts #contactdetails .socialmedia h3{
+        font-size: .8rem;
+    }
+
+    body main #contacts #contactdetails .mediaicon i{
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    /**********Email Address**********/
+    body main #contacts #contactdetails .emailaddress{
+        width: 92%;
+    }
+    body main #contacts #contactdetails .email i{
+        font-size: 1.5rem;
+    }
+    body main #contacts #contactdetails .email .wrapboxemail a{
+        font-size: 1rem;
+    }
+
+    /**********Location**********/
+    body main #contacts #contactdetails .location i{
+        font-size: 1.5rem;
+    }
+    body main #contacts #contactdetails .location .wrapboxlocation a{
+        font-size: .8rem;
+    }
+}
+
+/*****************Mobile Screen ViewSize*****************/
+@media (max-width: 480px){
+    /**********LOGO**********/
+    body nav h1{
+        font-size: 2rem;
+        margin-left: 30px;
+    }
+
+    /**********Navigation Unordered List**********/
+    body nav ul{
+        flex-direction: column;
+        height: 400px;
+    }
+    body nav ul a{
+        font-size: 1rem;
+    }
+
+    body nav .navicon .fa-bars{
+        font-size: 1.5rem;
+    }
+
+    /************************************Header************************************/
+    body header{
+        height: 400px;
+    }
+
+    /**********My Photo**********/
+    body header .mypic{
+        width: 180px;
+        right: 0px;
+    }
+    body header .wrappersonalinfo{
+        height: 300px;
+        top: 50px;
+        left: 50px;
+    }
+    /**********My Quote**********/
+    body header .wrappersonalinfo .quote{
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+    /**********My Name**********/
+    body header .wrappersonalinfo .myname{
+        font-size: 1rem;
+    }
+    /**********My Course**********/
+    body header .wrappersonalinfo .mycourse{
+        font-size: .6rem;
+        font-weight: 200;
+        margin-bottom: 50px;
+    }
+    /**********Passionate**********/
+    body header .wrappersonalinfo .passionate{
+        font-size: .8rem;
+    }
+
+    /**********About Me**********/
+    body main #Aboutme{
+        height: 820px;
+    }
+    body main #Aboutme h1{
+        font-size: 1.5rem;
+    }
+    body main #Aboutme h3{
+        font-size: .8rem;
+    }
+    body main #Aboutme aside{
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }   
+    /**********My Journey**********/
+    body main #Aboutme aside #myjourney{
+        height: 250px;
+    }
+    body main #Aboutme aside #myjourney h2{
+        font-size: 1.5rem;
+    }
+    body main #Aboutme aside #myjourney h3{
+        font-size: .8rem;
+    }
+    /**********My Approach**********/
+    body main #Aboutme aside #myapproach{
+        height: 250px;
+    }
+    body main #Aboutme aside #myapproach h2{
+        font-size: 1.5rem;
+    }
+    body main #Aboutme aside #myapproach h3{
+        font-size: .8rem;
+    }
+
+    /**********Core Competencies**********/
+    body main #corecompetencies{
+        height: 750px;
+        /* border: 1px solid red; */
+    }
+    body main #corecompetencies h1{
+        font-size: 1.5rem;
+    }
+    /**********Cores**********/
+    body main #corecompetencies #core .corebox{
+        height: 120px;
+    }
+    body main #corecompetencies #core .corebox h1{
+        font-size: 1rem;
+    }
+    body main #corecompetencies #core .corebox h3{
+        font-size: .8rem;
+    }
+
+
+    /**********My Projects**********/
+    body main #myprojects{
+        max-width: 90%;
+    }
+    body main #myprojects h1{
+        font-size: 1.5rem;
+    }
+    body main #myprojects h2{
+        font-size: .8rem;
+        text-align: center;
+    }
+    body main #myprojects .projbox{
+        width: 70%;
+        height: 350px;
+    }
+    body main #myprojects .projbox img{
+        height: 150px;
+    }
+    body main #myprojects .projbox .details .title{
+        font-size: .8rem;
+    }
+    body main #myprojects .projbox .details{
+        height: 150px;
+    }
+    body main #myprojects .projbox .details .fa-arrow-up-right-from-square{
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+
+    /**********Contacts**********/
+    body main #contacts{
+        height: 1000px;
+    } 
+
+    /**********Form Message Email**********/
+    body main #contacts form input{
+        width: 38%;
+    }
+    body main #contacts #contactdetails .socialmedia{
+        width: 92%;
+        height: 130px;
+    }
+
+    /**********Email Address**********/
+    body main #contacts #contactdetails .email .wrapboxemail label{
+        font-size: .8rem;
+    }
+    body main #contacts #contactdetails .email .wrapboxemail a{
+        font-size: .5rem;
+    }
+
+    /**********Location**********/
+    body main #contacts #contactdetails .location .wrapboxlocation label{
+        font-size: .8rem;
+    }
+    body main #contacts #contactdetails .location .wrapboxlocation h3{
+        font-size: .6rem;
+    }
+}
+
+/*****************Mobile Extra Small Screen ViewSize*****************/
+@media (max-width: 360px){
+    /**********Navigation Unordered List**********/
+    
+    body nav ul a{
+        font-size: .8rem;
+    }
+
+    /************************************Header************************************/
+    body header{
+        height: 400px;
+    }
+
+    /**********My Photo**********/
+    body header .mypic{
+        width: 150px;
+        right: 0px;
+    }
+    body header .wrappersonalinfo{
+        height: 300px;
+        top: 50px;
+        left: 30px;
+    }
+    /**********My Quote**********/
+    body header .wrappersonalinfo .quote{
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+    /**********My Name**********/
+    body header .wrappersonalinfo .myname{
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    /**********My Course**********/
+    body header .wrappersonalinfo .mycourse{
+        font-size: .6rem;
+        font-weight: 200;
+        margin-bottom: 50px;
+    }
+    /**********Passionate**********/
+    body header .wrappersonalinfo .passionate{
+        font-size: .6rem;
+    }
+
+    /**********About Me**********/
+    body main #Aboutme{
+        height: 950px;
+    }
+    body main #Aboutme h1{
+        font-size: 1rem;
+    }
+    body main #Aboutme h3{
+        font-size: .8rem;
+    }
+    body main #Aboutme aside{
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }   
+    /**********My Journey**********/
+    body main #Aboutme aside #myjourney{
+        height: 310px;
+    }
+    body main #Aboutme aside #myjourney h2{
+        font-size: 1rem;
+    }
+    body main #Aboutme aside #myjourney h3{
+        font-size: .8rem;
+    }
+    /**********My Approach**********/
+    body main #Aboutme aside #myapproach{
+        height: 310px;
+    }
+    body main #Aboutme aside #myapproach h2{
+        font-size: 1rem;
+    }
+    body main #Aboutme aside #myapproach h3{
+        font-size: .8rem;
+    }
+
+    /**********Core Competencies**********/
+    body main #corecompetencies{
+        height: 750px;
+    }
+    body main #corecompetencies h1{
+        font-size: 1rem;
+    }
+    /**********Cores**********/
+    body main #corecompetencies #core .corebox{
+        height: 120px;
+    }
+    body main #corecompetencies #core .corebox h1{
+        font-size: 1rem;
+    }
+    body main #corecompetencies #core .corebox h3{
+        font-size: .8rem;
+    }
+
+    /**********My Projects**********/
+
+    /**********Contacts**********/
+    body main #contacts{
+        height: 1010px;
+    } 
+
+    /**********Form Message Email**********/
+    body main #contacts form input{
+        width: 37%;
+    }
+    body main #contacts #contactdetails .socialmedia{
+        height: 150px;
+    }
+
+    body main #contacts #contactdetails .mediaicon i{
+        font-size: 1rem;
+        width: 40px;
+        height: 30px;
+    }
+
+    /**********Email Address**********/
+    body main #contacts #contactdetails .email i{
+        font-size: 1rem;
+    }
+
+    /**********Location**********/
+    body main #contacts #contactdetails .location i{
+        font-size: 1rem;
+    }
+
+    /************************************Footer************************************/
+    body footer h1{
+        font-size: .8rem;
+    }
+
+}
