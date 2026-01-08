@@ -470,7 +470,7 @@ body main #myprojects #projectbox{
 }
 body main #myprojects .projbox{
     width: 30%;
-    height: 450px;
+    height: 470px;
     background-color: whitesmoke;
     border-radius: 10px;
     /* border: 1px solid blue; */
@@ -499,10 +499,34 @@ body main #myprojects .projbox .imageproj img:hover{
 }
 body main #myprojects .projbox .details{
     max-width: 100%;
-    height: 210px;
+    height: 230px;
     /* border: 1px solid red; */
     position: relative;
     padding: 20px;
+}
+body main #myprojects .projbox .details .techtool-list{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+    /* display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: horizontal;
+    -webkit-line-clamp: var(--max-lines); */
+}
+body main #myprojects .projbox .details .techtool-list li{
+    cursor: default;
+    font-family: 'Nata Sans';
+    font-size: .9rem;
+    font-weight: 400;
+    color: white;
+    background-color: var(--top-content);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .5s;
+}
+body main #myprojects .projbox .details .techtool-list li:hover{
+    transform: translateY(-3px);
 }
 
 body main #myprojects .projbox .details .title{
@@ -533,7 +557,7 @@ body main #myprojects .projbox .details .fa-arrow-up-right-from-square{
     position: absolute;
     right: 0px;
     bottom: 0px;
-    padding: 30px;
+    padding: 20px;
 }
 
 /**********Contacts**********/
@@ -1185,6 +1209,9 @@ body footer h1{
 
 /*****************Mobile/Tablet Screen ViewSize*****************/
 @media (max-width: 780px){
+    body{
+        background-color: lightblue;
+    }
     /**********LOGO**********/
     body nav h1{
         margin-left: 50px;
@@ -1306,7 +1333,7 @@ body footer h1{
     }
     body main #myprojects .projbox{
         width: 50%;
-        height: 380px;
+        height: 450px;
         /* border: 1px solid red; */
     }
     body main #myprojects .projbox img{
@@ -1316,7 +1343,7 @@ body footer h1{
         font-size: .8rem;
     }
     body main #myprojects .projbox .details {
-        height: 150px;
+        height: 210px;
     }
     body main #myprojects .projbox .details .fa-arrow-up-right-from-square{
         font-size: 1rem;

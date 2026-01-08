@@ -51,6 +51,10 @@ function displayProjects(){
         proj.innerHTML = `
             <div class="imageproj"><img src="${project.image}"/></div>
             <div class="details"> 
+                <ul class="techtool-list">
+                    <li>${project.techtools[0]}</li>
+                    <li>${project.techtools[1]}</li>
+                </ul>
                 <h2 class="title">${project.title}</h2>
                 <h3 class="desc">${project.desc}</h3>
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -65,6 +69,7 @@ function displayProjects(){
         });
     });
 }
+
 
 
 // ************************************Sending Message in Email************************************
@@ -133,45 +138,5 @@ observer.observe(fifthSection)
 
 
 
-
-
-
-
-
-
-// function callbackFunction(entries){
-//     entries.forEach(entry => {
-//         if(entry.isIntersecting){
-//             if(entry.target.id === 'firstSection'){
-//                 entry.target.classList.add('loaded')
-//             }
-
-//             if(entry.target.id === 'secondSection'){
-//                 entry.target.classList.add('fade-in')
-//             }
-
-//             if(entry.target.id === 'thirdSection'){
-//                 entry.target.classList.add('fade-in')
-//             }
-
-//             if(entry.target.id === 'fourthSection'){
-//                 entry.target.classList.add('fade-in')
-//             }
-
-//             if(entry.target.id === 'fifthSection'){
-//                 entry.target.classList.add('fade-in')
-//             }
-
-//             // everything
-//             observer.unobserve(entry.target)
-//         }
-//     }) 
-// }
-
-// observer.observe(firstSection)
-// observer.observe(secondSection)
-// observer.observe(thirdSection)
-// observer.observe(fourthSection)
-// observer.observe(fifthSection)
 
 

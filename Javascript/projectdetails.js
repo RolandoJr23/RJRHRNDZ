@@ -46,9 +46,9 @@ function displayProjects(){
 function displayProjectsDetails(){
     const proj = JSON.parse(sessionStorage.getItem("selectedProjects"));
 
-    const techtoolProj = document.querySelector(".techtools");
     const titleProj = document.querySelector(".title");
     const descProj = document.querySelector(".description");
+    const techtoolProj = document.querySelector(".techtools");
     const projImage = document.querySelector(".proj-img");
     const overView = document.querySelector(".overview");
     const date = document.querySelector(".date");
@@ -58,8 +58,7 @@ function displayProjectsDetails(){
     const featurelist = document.querySelector(".feature-list");
 
     // let selectedTechtools = proj.techtools[0];
-
-    // techtoolProj.innerHTML = "";
+    
     // proj.techtools.forEach(tool => {
     //     const tecttool = document.createElement("button");
     //     tecttool.textContent = tool;
@@ -71,6 +70,13 @@ function displayProjectsDetails(){
     titleProj.textContent = proj.title;
     descProj.textContent = proj.desc;
 
+    techtoolProj.innerHTML = `
+        <ul class="techtool-list">
+            <li>${proj.techtools[0]}</li>
+            <li>${proj.techtools[1]}</li>
+        </ul>
+    `;
+
     projImage.innerHTML = `
         <img src="${proj.image}">
     `;
@@ -80,15 +86,6 @@ function displayProjectsDetails(){
     team.textContent = proj.team;
 
     category.textContent = proj.category
-
-    // category.innerHTML = `
-    //     <ol>
-    //         <li>${proj.category[0]},</li>
-    //         <li>${proj.category[1]},</li>
-    //         <li>${proj.category[2]},</li>
-    //         <li>${proj.category[3]}</li>
-    //     </ol>
-    // `;
 
     featurelist.innerHTML = `
         <ol>
