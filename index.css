@@ -998,9 +998,6 @@ body footer h1{
 
 /*****************Laptop Screen ViewSize*****************/
 @media (max-width: 1080px){
-    body{
-        background-color: lightblue;
-    }
     /************************************Navigation************************************/
     body nav{
         height: 80px;
