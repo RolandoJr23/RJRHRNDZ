@@ -71,9 +71,11 @@ body nav h1 span{
     filter: drop-shadow( 1px 1px 3px white);
 }
 body nav h1:hover{
+    
     transform: scale(1.1);
     /* filter: drop-shadow( 1px 1px 3px white); */
 }
+
 
 /**********Navigation Unordered List**********/
 body nav ul{
@@ -1209,9 +1211,6 @@ body footer h1{
 
 /*****************Mobile/Tablet Screen ViewSize*****************/
 @media (max-width: 780px){
-    body{
-        background-color: lightblue;
-    }
     /**********LOGO**********/
     body nav h1{
         margin-left: 50px;
@@ -1264,6 +1263,8 @@ body footer h1{
     /**********About Me**********/
     body main #Aboutme{
         height: 900px;
+        margin-bottom: 20px;
+        /* border: 1px solid red; */
     }
     body main #Aboutme h1{
         font-size: 1.5rem;
@@ -1298,7 +1299,8 @@ body footer h1{
 
     /**********Core Competencies**********/
     body main #corecompetencies{
-        height: 600px;
+        height: 700px;
+        /* border: 1px solid red; */
     }
     body main #corecompetencies h1{
         font-size: 2rem;
@@ -1320,6 +1322,7 @@ body footer h1{
     /**********My Projects**********/
     body main #myprojects{
         max-width: 90%;
+        margin-bottom: 100px;
         /* border: 1px solid red; */
     }
     body main #myprojects h1{
@@ -1588,7 +1591,7 @@ body footer h1{
     /**********Navigation Unordered List**********/
     
     body nav ul a{
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
     /************************************Header************************************/
@@ -1596,6 +1599,11 @@ body footer h1{
         height: 400px;
     }
 
+    body nav ul .nav-item .fa-file{
+        font-size: 1.5rem;
+        height: 35px;
+    }
+    
     /**********My Photo**********/
     body header .mypic{
         width: 150px;
