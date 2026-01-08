@@ -1340,7 +1340,7 @@ body footer h1{
         height: 150px;
     }
     body main #myprojects .projbox .details .title{
-        font-size: .8rem;
+        font-size: 1rem;
     }
     body main #myprojects .projbox .details {
         height: 210px;
@@ -1399,14 +1399,14 @@ body footer h1{
         font-size: 1.5rem;
     }
     body main #contacts #contactdetails .email .wrapboxemail a{
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     /**********Location**********/
     body main #contacts #contactdetails .location i{
         font-size: 1.5rem;
     }
-    body main #contacts #contactdetails .location .wrapboxlocation a{
+    body main #contacts #contactdetails .location .wrapboxlocation a h3{
         font-size: .8rem;
     }
 }
@@ -1512,7 +1512,7 @@ body footer h1{
     }
     /**********Cores**********/
     body main #corecompetencies #core .corebox{
-        height: 120px;
+        height: 150px;
     }
     body main #corecompetencies #core .corebox h1{
         font-size: 1rem;
@@ -1571,14 +1571,14 @@ body footer h1{
         font-size: .8rem;
     }
     body main #contacts #contactdetails .email .wrapboxemail a{
-        font-size: .5rem;
+        font-size: .6rem;
     }
 
     /**********Location**********/
     body main #contacts #contactdetails .location .wrapboxlocation label{
         font-size: .8rem;
     }
-    body main #contacts #contactdetails .location .wrapboxlocation h3{
+    body main #contacts #contactdetails .location .wrapboxlocation a h3{
         font-size: .6rem;
     }
 }
@@ -1671,7 +1671,7 @@ body footer h1{
     }
     /**********Cores**********/
     body main #corecompetencies #core .corebox{
-        height: 120px;
+        height: 130px;
     }
     body main #corecompetencies #core .corebox h1{
         font-size: 1rem;
@@ -1681,6 +1681,12 @@ body footer h1{
     }
 
     /**********My Projects**********/
+    body main #myprojects .projbox{
+        height: 440px;
+    }
+    body main #myprojects .projbox .details{
+        height: 200px;
+    }
 
     /**********Contacts**********/
     body main #contacts{
