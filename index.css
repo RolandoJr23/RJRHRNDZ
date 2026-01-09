@@ -374,6 +374,7 @@ body main #Aboutme aside #myjourney h3{
     font-size: 1.2rem;
     text-align: justify;
     color: var(--top-content);
+    text-indent: 50px;
     margin-top: 20px;
 }
 
@@ -397,6 +398,7 @@ body main #Aboutme aside #myapproach h3{
     font-size: 1.2rem;
     text-align: justify;
     color: var(--top-content);
+    text-indent: 50px;
     margin-top: 20px;
 }
 
@@ -593,6 +595,7 @@ body main #myprojects .projbox .details  .desc{
     font-size: 1rem;
     font-weight: 400;
     text-align: justify;
+    text-indent: 50px;
     color: var(--top-content);
     --max-lines: 3;
 
