@@ -439,6 +439,7 @@ body main #corecompetencies #core{
     margin-top: 30px;
 }
 body main #corecompetencies #core .corebox{
+    cursor: default;
     max-width: 35%;
     height: 100px;
     background-color: whitesmoke;
@@ -448,6 +449,11 @@ body main #corecompetencies #core .corebox{
     align-items: center;
     padding: 20px;  
     /* border: 1px solid red; */
+    transform: translateY(5px);
+    transition: .5s ease;
+}
+body main #corecompetencies #core .corebox:hover{
+    transform: translateY(0px);
 }
 body main #corecompetencies #core .corebox span{
     font-size: 1.5rem;
@@ -591,6 +597,7 @@ body main #myprojects .projbox .details  .desc{
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: var(--max-lines);
+    line-clamp: var(--max-lines);
 }
 
 body main #myprojects .projbox .details .fa-arrow-up-right-from-square{
@@ -1549,7 +1556,7 @@ body footer h1{
 
     /**********Core Competencies**********/
     body main #corecompetencies{
-        height: 750px;
+        height: 880px;
         /* border: 1px solid red; */
     }
     body main #corecompetencies h1{
@@ -1580,7 +1587,7 @@ body footer h1{
     }
     body main #myprojects .projbox{
         width: 70%;
-        height: 350px;
+        height: 400px;
     }
     body main #myprojects .projbox img{
         height: 150px;

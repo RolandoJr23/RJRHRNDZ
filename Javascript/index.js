@@ -74,7 +74,6 @@ function displayProjects(){
 }
 
 
-
 // ************************************Sending Message in Email************************************
 (function(){
     emailjs.init({
@@ -111,8 +110,6 @@ window.onload = function(){
 
 const firstSection = document.querySelector("#header");
 const secondSection = document.querySelector("#Aboutme");
-// const myjourney = document.querySelector("#myjourney");
-// const myapproach = document.querySelector("#myapproach");
 const aside = document.querySelector("aside");
 const thirdSection = document.querySelector("#corecompetencies");
 const fourthSection = document.querySelector("#myprojects");
@@ -130,8 +127,6 @@ const observer = new IntersectionObserver((entries) => {
 })
 observer.observe(firstSection)
 observer.observe(secondSection)
-// observer.observe(myjourney)
-// observer.observe(myapproach)
 observer.observe(aside)
 observer.observe(thirdSection)
 observer.observe(fourthSection)
