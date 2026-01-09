@@ -23,10 +23,13 @@ document.documentElement.style.setProperty("--scroll-padding", navigationHeight 
 
 
 // ************************************Toggle Menu Navigation Bar************************************
+const hamMenu = document.querySelector(".ham-menu");
 const togMenu = document.querySelector("ul");
+
 togMenu.style.maxHeight= "0px";
 
-function toggleMenu(){
+hamMenu.addEventListener("click", () => {
+    hamMenu.classList.toggle("active");
     if(togMenu.style.maxHeight == "0px")
     {
         togMenu.style.maxHeight = "400px"
@@ -34,7 +37,7 @@ function toggleMenu(){
     else{
         togMenu.style.maxHeight = "0px"
     }
-}
+});
 
 
 // ************************************Display All Projects************************************

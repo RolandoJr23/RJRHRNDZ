@@ -172,6 +172,47 @@ body nav .navicon .fa-bars:hover{
     filter: drop-shadow(1px 1px 3px white);
 }
 
+body nav .ham-menu{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    /* border: 1px solid red; */
+    display: none;
+}
+body nav .ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+body nav .ham-menu:hover{
+    filter: drop-shadow(1px 1px 3px white);
+}
+body nav .ham-menu span:nth-child(1){
+    top: 20%;
+}
+body nav .ham-menu span:nth-child(3){
+    top: 80%;
+}
+body nav .ham-menu.active span:nth-child(1){
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+}body nav .ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+body nav .ham-menu.active span:nth-child(3){
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+}
+
 /************************************Header************************************/
 body header{
     display: flex;
@@ -1048,7 +1089,8 @@ body footer h1{
         display: none;
     }
 
-    body nav .navicon{
+    body nav .ham-menu{
+        top: 25px;
         display: block;
     }
 
@@ -1221,7 +1263,7 @@ body footer h1{
         font-size: 1rem;
     }
 
-    body nav .navicon{
+    body nav .ham-menu{
         right: 50px;
     }
 
