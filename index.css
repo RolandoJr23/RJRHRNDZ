@@ -419,12 +419,15 @@ body main #corecompetencies.show{
     transform: translateX(0px);
     opacity: 1;
 }
-
 body main #corecompetencies h1{
     font-family: 'Nata Sans';
     font-size: 3rem;
     text-transform: uppercase;
     color: var(--top-content);
+}
+body main #corecompetencies h1 i{
+    padding-right: 10px;
+    /* border: 1px solid red; */
 }
 
 /**********Cores**********/
