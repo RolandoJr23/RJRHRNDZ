@@ -161,12 +161,13 @@ body header .projectsname{
 }
 
 body header .projectsname button{
-    width: 100px;
+    width: 90px;
     height: 5vh;
     background-color: transparent;
     border: none;
     position: absolute;
     left: 0;
+    /* border: 1px solid red; */
 }
 body header .projectsname button i{
     font-size: 3rem;
@@ -178,29 +179,6 @@ body header .projectsname button i:hover{
     filter: drop-shadow(1px 1px 3px white);
 }
 
-/* body header .projectsname .techtools-btns{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid red;
-} */
-
-
-/* body header .projectsname .selected{
-    width: 70px;
-    height: 30px;
-    background-color: var(--top-content);
-    border-radius: 40px;
-    border: 1px solid white;
-    position: absolute;
-    top: 40px;
-    left: 100px;
-    color: white;
-} */
-
 body header .projectsname .title{
     font-size: 3rem;
     color: white;
@@ -208,7 +186,7 @@ body header .projectsname .title{
     font-weight: 400;
     filter: drop-shadow(1px 1px 10px white);
     text-align: center;
-    margin-top: 60px;
+    margin-top: 100px;
     /* border: 1px solid white; */
 }
 
@@ -220,38 +198,32 @@ body header .projectsname .description{
     text-align: center;
 }
 
-body header .projectsname .techtool-list{
+body header .projectsname .techtools{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    width: 85%;
+    position: absolute;
     /* border: 1px solid red; */
-    width: 500px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
-body header .projectsname .techtool-list li{
-    font-size: 1.2rem;
+body header .projectsname .techtools li{
+    cursor: default;
+    color: var(--top-content);
+    font-size: 1rem;
     font-family: 'Nata Sans';
     font-weight: 400;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 40px;
-    border: 1px solid white;
-    border-radius: 5px;
-    transition: .5s;
-}
-body header .projectsname .techtool-list li:hover{
-    cursor: default;
     background-color: white;
-    color: var(--top-content);
-    transform: translateY(-5px);
-    filter: drop-shadow(1px 1px 10px white);
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s ease;
 }
+body header .projectsname .techtools li:hover{
+    background-color: white;
+    transform: translateY(-5px);
+    filter: drop-shadow(1px 1px 5px white);
+}
+
 
 /************************************Main************************************/
 body main{
@@ -478,21 +450,19 @@ body footer h1{
 /************************************Responsive Media Query************************************/
 @media (max-width: 1640px){
     body{
-        /* background-color: pink; */
+        background-color: pink;
     }
     
     /************************************Main************************************/
     body main{
-        max-width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        /* border: 1px solid red; */
-        gap: 50px;
+        gap: 100px;
     }
+
+    body header .projectsname .techtools{
+        width: 90%;
+        margin-left: 100px;
+    }
+
 
     /******************Project Overview******************/
     body main .projoverview{
@@ -502,6 +472,9 @@ body footer h1{
 }
 
 @media (max-width: 1240px){
+    body{
+        background-color: lightblue;
+    }
     /**********LOGO**********/
     body nav h1{
         font-size: 2.5rem;
@@ -533,6 +506,11 @@ body footer h1{
         /* border: 1px solid red; */
     }
 
+    body header .projectsname .techtools{
+        width: 90%;
+        margin-left: 100px;
+    }
+
     /************************************Main************************************/
     body main{
         gap: 60px;
@@ -554,6 +532,9 @@ body footer h1{
 }
 
 @media (max-width: 1080px){
+    body{
+        background-color: pink;
+    }
     /************************************Navigation************************************/
     body nav{
         height: 80px;
@@ -577,6 +558,15 @@ body footer h1{
     /******************Project Overview******************/
     body main .projoverview{
         max-width: 50%;
+    }
+
+    body header .projectsname .techtools{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    body header .projectsname .techtools li{
+        padding: 8px;
     }
 
     body main .projoverview img{
@@ -616,6 +606,9 @@ body footer h1{
 }
 
 @media (max-width: 780px){
+    body{
+        background-color: lightblue;
+    }
     /**********LOGO**********/
     body nav h1{
         margin-left: 50px;
@@ -624,10 +617,25 @@ body footer h1{
     body nav .navicon{
         right: 50px;
     }
+
     /************************************Header************************************/
     body header .projectsname{
         width: 80%;
         /* border: 1px solid red; */
+    }
+
+    body header .projectsname .title{
+        margin-top: 120px;
+    }
+
+    body header .projectsname .techtools{
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 50px;
+        gap: 10px;
+    }
+    body header .projectsname .techtools li{
+        padding: 5px;
     }
 
     body header .projectsname button{
@@ -669,6 +677,9 @@ body footer h1{
 }
 
 @media (max-width: 480px){
+    body{
+        background-color: pink;
+    }
     /**********LOGO**********/
     body nav h1{
         font-size: 2rem;
@@ -697,6 +708,11 @@ body footer h1{
 
     body header .projectsname .title{
         font-size: 1.5rem;
+        margin-top: 150px;
+    }
+    body header .projectsname .techtools li{
+        font-size: .8rem;
+        padding: 5px;
     }
 
     body header .projectsname .description{
@@ -748,5 +764,10 @@ body footer h1{
 }
 
 @media (max-width: 360px){
-    
+    body header .projectsname .title{
+        margin-top: 100px;
+    }
+    body header .projectsname .techtools li{
+        font-size: .6rem;
+    }
 }

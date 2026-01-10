@@ -40,6 +40,50 @@ hamMenu.addEventListener("click", () => {
 });
 
 
+// ************************************Header Quotes, Name and Course Auto Typed**********************
+const typedJS = window.Typed;
+
+const typedMotivate = new Typed('#auto-typed', {
+    strings: ['BRAVE', 'UNIQUE', 'ACCEPTABLE', 'MINDFUL', 'YOUSELF.'],
+    typeSpeed: 150,
+    backSpeed: 200,
+    loop: true
+});
+const typedPassionate = new Typed('#auto-typed-passionate', {
+    strings: ['SOFTWARE ENGINEER', 'AI ENGINEER', 'FULL STACK DEV', 'AUTOMATION DEV', 'DATA SCIENCE', 'DATA ANALYST'],
+    typeSpeed: 150,
+    backSpeed: 200,
+    loop: true
+});
+
+
+// ************************************Scroll Down Animation************************************
+
+const firstSection = document.querySelector("#header");
+const secondSection = document.querySelector("#Aboutme");
+const aside = document.querySelector("aside");
+const thirdSection = document.querySelector("#corecompetencies");
+const fourthSection = document.querySelector("#myprojects");
+const fifthSection = document.querySelector("#contacts");
+
+const observer = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting){
+        entries[0].target.classList.add("show");
+    }else{
+        entries[0].target.classList.remove("show");
+    }
+}, 
+{
+    threshold: 0.2
+})
+observer.observe(firstSection)
+observer.observe(secondSection)
+observer.observe(aside)
+observer.observe(thirdSection)
+observer.observe(fourthSection)
+observer.observe(fifthSection)
+
+
 // ************************************Display All Projects************************************
 const projects = document.querySelector("#projectbox");
 
@@ -55,8 +99,7 @@ function displayProjects(){
             <div class="imageproj"><img src="${project.image}"/></div>
             <div class="details"> 
                 <ul class="techtool-list">
-                    <li>${project.techtools[0]}</li>
-                    <li>${project.techtools[1]}</li>
+                    ${project.techtools.filter(tool => tool !== undefined).map(tool => `<li>${tool}</li>`).join('')}
                 </ul>
                 <h2 class="title">${project.title}</h2>
                 <h3 class="desc">${project.desc}</h3>
@@ -105,34 +148,7 @@ window.onload = function(){
     });
 };
 
-
-// ************************************Scroll Down Animation************************************
-
-const firstSection = document.querySelector("#header");
-const secondSection = document.querySelector("#Aboutme");
-const aside = document.querySelector("aside");
-const thirdSection = document.querySelector("#corecompetencies");
-const fourthSection = document.querySelector("#myprojects");
-const fifthSection = document.querySelector("#contacts");
-
-const observer = new IntersectionObserver((entries) => {
-    if(entries[0].isIntersecting){
-        entries[0].target.classList.add("show");
-    }else{
-        entries[0].target.classList.remove("show");
-    }
-}, 
-{
-    threshold: 0.2
-})
-observer.observe(firstSection)
-observer.observe(secondSection)
-observer.observe(aside)
-observer.observe(thirdSection)
-observer.observe(fourthSection)
-observer.observe(fifthSection)
-
-
+// ************************************End of Javascript Code************************************
 
 
 

@@ -57,25 +57,14 @@ function displayProjectsDetails(){
 
     const featurelist = document.querySelector(".feature-list");
 
-    // let selectedTechtools = proj.techtools[0];
-    
-    // proj.techtools.forEach(tool => {
-    //     const tecttool = document.createElement("button");
-    //     tecttool.textContent = tool;
-    //     if (tool === selectedTechtools) tecttool.classList.add("selected");
-
-    //     techtoolProj.appendChild(tecttool);
-    // });
-
     titleProj.textContent = proj.title;
     descProj.textContent = proj.desc;
 
-    techtoolProj.innerHTML = `
-        <ul class="techtool-list">
-            <li>${proj.techtools[0]}</li>
-            <li>${proj.techtools[1]}</li>
-        </ul>
-    `;
+    for (let i = 0; i < proj.techtools.length; i++) {
+        const techtool = document.createElement("li");
+        techtool.textContent = proj.techtools[i];
+        techtoolProj.appendChild(techtool);
+    }
 
     projImage.innerHTML = `
         <img src="${proj.image}">
@@ -96,6 +85,7 @@ function displayProjectsDetails(){
         </ol>
     `;
 }
+
 
 // ************************************Scroll Down Animation************************************
 const projName = document.querySelector("header");

@@ -560,13 +560,18 @@ body main #myprojects .projbox .details{
 }
 body main #myprojects .projbox .details .techtool-list{
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    padding: 10px 0 0 0;
     margin-bottom: 10px;
-    /* border: 1px solid red; */
-    /* display: -webkit-box;
+
+    display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: horizontal;
-    -webkit-line-clamp: var(--max-lines); */
+
+    /* display: flex;
+    flex-wrap: wrap;
+    overflow: visible; */
+    /* border: 1px solid red; */
 }
 body main #myprojects .projbox .details .techtool-list li{
     cursor: default;
