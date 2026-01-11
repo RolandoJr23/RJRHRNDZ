@@ -57,10 +57,20 @@ body nav.scrolled{
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
 }
 /**********LOGO**********/
+body nav #rjrlogo{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+body nav #rjrlogo img{
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+}
 body nav h1{
     cursor: default;
     font-family: 'Nata Sans';
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     color: white;
     margin-left: 200px;
@@ -68,10 +78,11 @@ body nav h1{
 }
 body nav h1 span{
     color: white;
-    filter: drop-shadow( 1px 1px 3px white);
+    /* filter: drop-shadow( 1px 1px 3px white); */
 }
 body nav h1:hover{
     transform: scale(1.1);
+    filter: drop-shadow( 1px 1px 3px white);
 }
 
 /**********Navigation Unordered List**********/
@@ -614,6 +625,15 @@ body footer h1{
     body nav{
         height: 80px;
     }
+    /**********LOGO**********/
+    body nav #rjrlogo img{
+        height: 70px;
+        width: 70px;
+    }
+    body nav h1{
+        font-size: 1.5rem;
+    }
+
     body nav ul{
         background-color: var(--top-content);
         /* flex-direction: column; */
@@ -769,8 +789,12 @@ body footer h1{
 
 @media (max-width: 480px){
     /**********LOGO**********/
+    body nav #rjrlogo img{
+        height: 60px;
+        width: 60px;
+    }
     body nav h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-left: 30px;
     }
 

@@ -35,7 +35,7 @@ hamMenu.addEventListener("click", () => {
     if(togMenu.style.maxHeight == "0px")
     {
         togMenu.style.maxHeight = "400px"
-        togMenu.style.transition = "max-height 0.5s ease-in-out";
+        togMenu.style.transition = "max-height .3s ease-in-out";
     }
     else{
         togMenu.style.maxHeight = "0px"
@@ -109,7 +109,7 @@ function displayProjects(){
         const proj = document.createElement("div");
         proj.classList.add("projbox");
         proj.innerHTML = `
-            <div class="imageproj"><img src="${project.image}"/></div>
+            <div  class="imageproj"><img src="${project.image}"/></div>
             <div class="details"> 
                 <ul class="techtool-list">
                     ${project.techtools.filter(tool => tool !== undefined)
@@ -117,7 +117,10 @@ function displayProjects(){
                 </ul>
                 <h2 class="title">${project.title}</h2>
                 <h3 class="desc">${project.desc}</h3>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <div class="btnlink">
+                    <button><a href="${project.githublink}" target="_blank">Code</a></button>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
             </div>
         `;
         projects.appendChild(proj);

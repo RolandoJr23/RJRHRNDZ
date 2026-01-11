@@ -9,7 +9,8 @@ const myprojects = [
         image: "images/imageproj/imgpos.png",
         date: "November2025 to Decemver2025",
         team: "Solo",
-        category: "Food Restaurant"
+        category: "Food Restaurant",
+        githublink: "https://github.com/RolandoJr23/PointOfSales.git"
     },
     {
         id: 2,
@@ -21,6 +22,7 @@ const myprojects = [
         image: "images/imageproj/imghotelbooking.png",
         date: "August2025 to September2025",
         team: "Solo",
-        category: "Commercial Hotel"
+        category: "Commercial Hotel",
+        githublink: "https://github.com/RolandoJr23/BookingHotelManagementSystem.git"
     }
 ]
