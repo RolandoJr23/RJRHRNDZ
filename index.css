@@ -250,6 +250,7 @@ body header .wrappersonalinfo{
     position: absolute;
     top: 100px;
     left: 200px;
+    transition: .5s ease-in-out;
 }
 
 /**********My Quote**********/
@@ -999,13 +1000,7 @@ body footer h1{
 @media (max-width: 1240px){
     /**********Navigation Links**********/
     body nav ul a{
-        font-family: 'Nata Sans';
-        font-weight: 400;
         font-size: 1rem;
-        filter: drop-shadow(1px 1px 3px white);
-        text-decoration: none;
-        color: var(--text-color);    
-        height: 35px;
     }
 
     /************************************Header************************************/
@@ -1125,6 +1120,7 @@ body footer h1{
     body header .wrappersonalinfo{
         height: 300px;
         left: 80px;
+        top: 50px;
     }
     /**********My Quote**********/
     body header .wrappersonalinfo .quote{
@@ -1298,7 +1294,7 @@ body footer h1{
     body header .wrappersonalinfo{
         height: 300px;
         top: 50px;
-        left: 50px;
+        left: 40px;
     }
     /**********My Quote**********/
     body header .wrappersonalinfo .quote{
@@ -1508,7 +1504,7 @@ body footer h1{
     body header .wrappersonalinfo{
         height: 300px;
         top: 50px;
-        left: 50px;
+        left: 40px;
     }
     /**********My Quote**********/
     body header .wrappersonalinfo .quote{

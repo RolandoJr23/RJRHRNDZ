@@ -25,17 +25,30 @@ document.documentElement.style.setProperty("--scroll-padding", navigationHeight 
 // ************************************Toggle Menu Navigation Bar************************************
 const hamMenu = document.querySelector(".ham-menu");
 const togMenu = document.querySelector("ul");
+const wrapprsninfo = document.querySelector(".wrappersonalinfo");
 
 togMenu.style.maxHeight= "0px";
+wrapprsninfo.style.transform = "translateY(0px)";
 
 hamMenu.addEventListener("click", () => {
     hamMenu.classList.toggle("active");
     if(togMenu.style.maxHeight == "0px")
     {
         togMenu.style.maxHeight = "400px"
+        togMenu.style.transition = "max-height 0.5s ease-in-out";
     }
     else{
         togMenu.style.maxHeight = "0px"
+    }
+});
+
+hamMenu.addEventListener("click", () => {
+    if(wrapprsninfo.style.transform == "translateY(0px)")
+    {
+        wrapprsninfo.style.transform = "translateY(80px)";
+    }
+    else{
+        wrapprsninfo.style.transform = "translateY(0px)";
     }
 });
 
@@ -99,7 +112,8 @@ function displayProjects(){
             <div class="imageproj"><img src="${project.image}"/></div>
             <div class="details"> 
                 <ul class="techtool-list">
-                    ${project.techtools.filter(tool => tool !== undefined).map(tool => `<li>${tool}</li>`).join('')}
+                    ${project.techtools.filter(tool => tool !== undefined)
+                        .map(tool => `<li>${tool}</li>`).join('')}
                 </ul>
                 <h2 class="title">${project.title}</h2>
                 <h3 class="desc">${project.desc}</h3>

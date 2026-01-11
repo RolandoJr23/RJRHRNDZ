@@ -14,6 +14,36 @@ function navShadow(){
     };
 } navShadow();
 
+// ************************************Toggle Menu Navigation Bar************************************
+const hamMenu = document.querySelector(".ham-menu");
+const togMenu = document.querySelector("ul");
+const projname = document.querySelector(".projectsname");
+
+togMenu.style.maxHeight= "0px";
+projname.style.transform = "translateY(0px)";
+
+hamMenu.addEventListener("click", () => {
+    hamMenu.classList.toggle("active");
+    if(togMenu.style.maxHeight == "0px")
+    {
+        togMenu.style.maxHeight = "400px"
+        togMenu.style.transition = "max-height 0.3s ease-in-out";
+    }
+    else{
+        togMenu.style.maxHeight = "0px"
+    }
+});
+
+hamMenu.addEventListener("click", () => {
+    if(projname.style.transform == "translateY(0px)")
+    {
+        projname.style.transform = "translateY(80px)";
+    }
+    else{
+        projname.style.transform = "translateY(0px)";
+    }
+});
+
 
 // ************************************Display All Projects************************************
 const projects = document.querySelector("#projectbox");
