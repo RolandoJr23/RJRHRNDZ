@@ -349,12 +349,12 @@ body main #Aboutme aside{
     flex-direction: row;
     /* border: 1px solid grey; */
     /* transition-delay: 300ms; */
-    transform: translateX(100px);
+    transform: translateY(100px);
     opacity: 0;
     transition: 800ms ease;
 }
 body main #Aboutme aside.show{
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity: 1;
 }
 
@@ -419,12 +419,12 @@ body main #corecompetencies{
     align-items: center;
     padding-top: 30px; 
     margin-bottom: 50px;
-    transform: translateX(-100px);
+    transform: translateY(100px);
     opacity: 0;
     transition: 800ms ease;
 }
 body main #corecompetencies.show{
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity: 1;
 }
 body main #corecompetencies h1{
@@ -494,12 +494,12 @@ body main #myprojects{
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateX(100px);
+    transform: translateY(100px);
     opacity: 0;
     transition: 800ms ease;
 }
 body main #myprojects.show{
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity: 1;
 }
 body main #myprojects h1{
@@ -1850,7 +1850,7 @@ body footer h1{
         flex-direction: column;
         height: 400px;
         gap: 15px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
     body nav ul a{
         font-size: 1rem;
