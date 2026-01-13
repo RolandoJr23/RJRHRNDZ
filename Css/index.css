@@ -45,7 +45,6 @@ body nav{
     height: 100px;
     z-index: 100;
     background-color: var(--top-content);
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     /* box-shadow: 0px 0px 10px 0px white; */
@@ -93,7 +92,6 @@ body nav ul{
     width: 50%;
     height: 70px;
     right: 20px;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +187,6 @@ body nav .ham-menu{
     position: absolute;
     top: 30px;
     right: 100px;
-    /* border: 1px solid red; */
     display: none;
 }
 body nav .ham-menu span{
@@ -248,13 +245,11 @@ body header .mypic{
     width: 600px;
     right: 30px;
     bottom: 0;
-    /* border: 1px solid red; */
 }
 
 body header .wrappersonalinfo{
     max-width: 60%;
     height: 620px;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -495,16 +490,16 @@ body main #myprojects{
     max-width: 60%;
     /* border: 1px solid blue;  */
     border-radius: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(30px);
+    transform: translateX(100px);
     opacity: 0;
     transition: 800ms ease;
 }
 body main #myprojects.show{
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
 }
 body main #myprojects h1{
@@ -671,6 +666,182 @@ body main #myprojects .projbox .details .btnlink .fa-arrow-up-right-from-square:
     transform: scale(1.1);
 }
 
+/**********Education & Experience**********/
+body main #educationexperience{
+    width: 60%;
+    height: 800px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px; 
+    margin-bottom: 100px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 800ms ease;
+}
+body main #educationexperience.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+body main #educationexperience h1{
+    font-family: 'Nata Sans';
+    font-size: 3rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+body main #educationexperience h2{
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+body main #educationexperience #eduexpbox{
+    width: 90%;
+    height: 600px;
+    border-radius: 10px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    gap: 50px;
+}
+/**********Education**********/
+body main #educationexperience #eduexpbox .education{
+    width: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body main #educationexperience #eduexpbox .education h1{
+    font-family: 'Nata Sans';
+    font-size: 2rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+body main #educationexperience #eduexpbox .education .educationlist{
+    width: 80%;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 3px solid var(--top-content);
+    padding: 10px;
+    gap: 10px;
+}
+
+body main #educationexperience #eduexpbox .education .educlist{
+    width: 90%;
+    max-height: auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    transition: .5s ease;
+    position: relative;
+    /* border: 1px solid red; */
+}
+body main #educationexperience #eduexpbox .education .educlist::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% + -10px);
+    right: calc(100% + 13px);
+    background-color: var(--top-content);
+    border-radius: 50%;
+}
+body main #educationexperience #eduexpbox .education .educlist:hover{
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+}
+body main #educationexperience #eduexpbox .education .educlist h2{
+    font-family: 'Nata Sans';
+    font-size: 1.2rem;
+    color: var(--top-content);
+}
+body main #educationexperience #eduexpbox .education .educlist h3{
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    color: var(--top-content);
+}
+
+
+/**********Experience**********/
+body main #educationexperience #eduexpbox .experience{
+    width: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body main #educationexperience #eduexpbox .experience h1{
+    font-family: 'Nata Sans';
+    font-size: 2rem;
+    color: var(--top-content);
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+body main #educationexperience #eduexpbox .experience .experiencelist{
+    width: 80%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 3px solid var(--top-content);
+    scrollbar-width: thin;
+    padding: 10px;
+    gap: 10px;
+}
+body main #educationexperience #eduexpbox .experience .explist{
+    width: 90%;
+    max-height: auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    transition: .5s ease;
+    position: relative;
+    /* border: 1px solid red; */
+}
+body main #educationexperience #eduexpbox .experience .explist::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% + -10px);
+    right: calc(100% + 13px);
+    background-color: var(--top-content);
+    border-radius: 50%;
+}
+body main #educationexperience #eduexpbox .experience .explist:hover{
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+body main #educationexperience #eduexpbox .experience .explist h2{
+    font-family: 'Nata Sans';
+    font-size: 1.2rem;
+    color: var(--top-content);
+}
+body main #educationexperience #eduexpbox .experience .explist h3{
+    font-family: 'Nata Sans';
+    font-size: 1rem;
+    color: var(--top-content);
+}
+
+
+
 /**********Contacts**********/
 body main #contacts{
     max-width: 60%;
@@ -703,6 +874,7 @@ body main #contacts h2{
     font-size: 1rem;
     color: var(--top-content);
     text-transform: uppercase;
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -1020,6 +1192,24 @@ body footer h1{
         font-weight: 600;
     }
 
+
+
+
+    /**********Education & Experience**********/
+    body main #educationexperience{
+        width: 80%;
+    }
+
+    body main #educationexperience #eduexpbox .education .educlist::before{
+        right: calc(100% + 12px);
+    }
+
+    body main #educationexperience #eduexpbox .experience .explist::before{
+        right: calc(100% + 12px);
+    }
+
+    
+
     /**********Contacts**********/
     body main #contacts{
         max-width: 80%;
@@ -1116,6 +1306,18 @@ body footer h1{
 
     body main #myprojects .projbox .details .title{
         font-size: 1rem;
+    }
+
+    body main #educationexperience h1{
+        font-size: 2.5rem;
+    }
+
+    body main #educationexperience #eduexpbox .education .educlist::before{
+        right: calc(100% + 8px);
+    }
+
+    body main #educationexperience #eduexpbox .experience .explist::before{
+        right: calc(100% + 8px);
     }
 
     /**********Contacts**********/
@@ -1260,6 +1462,57 @@ body footer h1{
         width: 23%;
     }
 
+
+
+    /**********Education & Experience**********/
+    body main #educationexperience{
+        width: 90%;
+        height: 740px;
+    }
+    body main #educationexperience h1{
+        font-size: 2rem;
+    }
+
+    body main #educationexperience #eduexpbox{
+        height: 550px;
+    }
+    /**********Education**********/
+    body main #educationexperience #eduexpbox .education h1{
+        font-size: 1.5rem;
+    }
+    body main #educationexperience #eduexpbox .education .educlist::before{
+        right: calc(100% + 6px);
+    }
+    body main #educationexperience #eduexpbox .education .educlist:hover{
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+    }
+    body main #educationexperience #eduexpbox .education .educlist h2{
+        font-size: 1rem;
+    }
+    body main #educationexperience #eduexpbox .education .educlist h3{
+        font-size: .8rem;
+    }
+
+    /**********Experience**********/
+    body main #educationexperience #eduexpbox .experience h1{
+        font-size: 1.5rem;
+    }
+    body main #educationexperience #eduexpbox .experience .explist::before{
+        right: calc(100% + 6px);
+    }
+    body main #educationexperience #eduexpbox .experience .explist:hover{
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+    }
+    body main #educationexperience #eduexpbox .experience .explist h2{
+        font-size: 1rem;
+    }
+    body main #educationexperience #eduexpbox .experience .explist h3{
+        font-size: .8rem;
+    }
+
+
+
+
     /**********Contacts**********/
     body main #contacts{
         max-width: 90%;
@@ -1333,8 +1586,12 @@ body footer h1{
     }
 
     /**********Navigation Unordered List**********/
+    body nav ul{
+        gap: 25px;
+    }
     body nav ul a{
-        font-size: 1rem;
+        height: 30px;
+        font-size: .8rem;
     }
 
     body nav .ham-menu{
@@ -1350,6 +1607,7 @@ body footer h1{
     body header .mypic{
         width: 250px;
         right: 0px;
+
     }
     body header .wrappersonalinfo{
         height: 300px;
@@ -1475,6 +1733,45 @@ body footer h1{
         font-size: 1rem;
     }
 
+
+    /**********Education & Experience**********/
+    body main #educationexperience{
+        width: 90%;
+        height: 1100px;
+    }
+    body main #educationexperience h1{
+        font-size: 2rem;
+    }
+
+    body main #educationexperience #eduexpbox{
+        height: 1000px;
+        flex-direction: column;
+        align-items: center;
+    }
+    /**********Education**********/
+    body main #educationexperience #eduexpbox .education{
+        width: 90%;
+    }
+    body main #educationexperience #eduexpbox .education .educlist{
+        height: 440px;
+    }
+    body main #educationexperience #eduexpbox .education .educlist::before{
+        right: calc(100% + 8px);
+    }
+
+    /**********Experience**********/
+    body main #educationexperience #eduexpbox .experience{
+        width: 90%;
+    }
+    body main #educationexperience #eduexpbox .experience .explist{
+        height: 440px;
+    }
+    body main #educationexperience #eduexpbox .experience .explist::before{
+        right: calc(100% + 8px);
+    }
+
+
+
     /**********Contacts**********/
     body main #contacts{
         height: 1000px;
@@ -1552,6 +1849,8 @@ body footer h1{
     body nav ul{
         flex-direction: column;
         height: 400px;
+        gap: 15px;
+        border: 1px solid red;
     }
     body nav ul a{
         font-size: 1rem;
@@ -1678,6 +1977,29 @@ body footer h1{
     body main #myprojects .projbox .details .btnlink .fa-arrow-up-right-from-square{
         font-size: 1rem;
     }
+
+
+
+
+    /**********Education & Experience**********/
+    body main #educationexperience h1{
+        font-size: 1.5rem;
+    }
+    /**********Education**********/
+    body main #educationexperience #eduexpbox .education .educlist::before{
+        width: 15px;
+        height: 15px;
+        right: calc(100% + 8px);
+    }
+
+    /**********Experience**********/
+    body main #educationexperience #eduexpbox .experience .explist::before{
+        width: 15px;
+        height: 15px;
+        right: calc(100% + 8px);
+    }
+
+
 
 
     /**********Contacts**********/
@@ -1820,6 +2142,50 @@ body footer h1{
     body main #myprojects .projbox .details{
         height: 200px;
     }
+
+
+    /**********Education & Experience**********/
+    body main #educationexperience{
+        height: 1300px;
+    }
+    body main #educationexperience h1{
+        font-size: 1.2rem;
+    }
+    body main #educationexperience h2{
+        font-size: .8rem;
+    }
+    body main #educationexperience #eduexpbox{
+        height: 1500px;
+    }
+    /**********Education**********/
+    body main #educationexperience #eduexpbox .education{
+        height: 700px;
+    }
+    body main #educationexperience #eduexpbox .education .educationlist{
+        height: 600px;
+    }
+    body main #educationexperience #eduexpbox .education .educlist{
+        height: 600px;
+    }
+    body main #educationexperience #eduexpbox .education .educlist::before{
+        right: calc(100% + 5px);
+    }
+
+    /**********Experience**********/
+    body main #educationexperience #eduexpbox .experience{
+        height: 400px;
+    }
+    body main #educationexperience #eduexpbox .experience .experiencelist{
+        height: 300px;
+    }
+    body main #educationexperience #eduexpbox .experience .explist{
+        height: 300px;
+    }
+    body main #educationexperience #eduexpbox .experience .explist::before{
+        right: calc(100% + 5px);
+    }
+
+
 
     /**********Contacts**********/
     body main #contacts{

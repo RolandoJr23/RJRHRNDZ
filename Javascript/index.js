@@ -77,7 +77,8 @@ const secondSection = document.querySelector("#Aboutme");
 const aside = document.querySelector("aside");
 const thirdSection = document.querySelector("#corecompetencies");
 const fourthSection = document.querySelector("#myprojects");
-const fifthSection = document.querySelector("#contacts");
+const fifthSection = document.querySelector("#educationexperience");
+const sixthSection = document.querySelector("#contacts");
 
 const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting){
@@ -95,6 +96,7 @@ observer.observe(aside)
 observer.observe(thirdSection)
 observer.observe(fourthSection)
 observer.observe(fifthSection)
+observer.observe(sixthSection)
 
 
 // ************************************Display All Projects************************************
@@ -132,6 +134,44 @@ function displayProjects(){
         });
     });
 }
+// ************************************Education & Experience Info Display************************************
+const edubox = document.querySelector(".educationlist");
+const expbox = document.querySelector(".experiencelist");
+
+if(edubox){
+    displayEducation();
+}
+
+function displayEducation(){
+    education.slice().reverse().forEach(edu => {
+        const edulist = document.createElement("div");
+        edulist.classList.add("educlist");
+        edulist.innerHTML = `
+            <h2 class="year">${edu.year}</h2>
+            <h3 class="school">${edu.school}</h3>
+            <h3 class="course">${edu.course}</h3>
+        `;
+        edubox.appendChild(edulist);
+    });
+}
+
+if(expbox){
+    displayExperience();
+}
+
+function displayExperience(){
+    experience.slice().reverse().forEach(exp => {
+        const explist = document.createElement("div");
+        explist.classList.add("explist");
+        explist.innerHTML = `
+            <h2 class="year">${exp.year}</h2>
+            <h3 class="company">${exp.company}</h3>
+            <h3 class="position">${exp.position}</h3>
+        `;
+        expbox.appendChild(explist);
+    }
+)};
+
 
 
 // ************************************Sending Message in Email************************************
