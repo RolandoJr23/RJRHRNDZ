@@ -691,7 +691,8 @@ body main #educationexperience h1{
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-body main #educationexperience h2{
+body main #educationexperience .txteducexp{
+    text-align: center;
     font-family: 'Nata Sans';
     font-size: 1rem;
     color: var(--top-content);
@@ -1849,7 +1850,7 @@ body footer h1{
     body nav ul{
         flex-direction: column;
         height: 400px;
-        gap: 15px;
+        gap: 25px;
         /* border: 1px solid red; */
     }
     body nav ul a{
@@ -1984,6 +1985,9 @@ body footer h1{
     /**********Education & Experience**********/
     body main #educationexperience h1{
         font-size: 1.5rem;
+    }
+    body main #educationexperience .txteducexp{
+        font-size: .8rem;
     }
     /**********Education**********/
     body main #educationexperience #eduexpbox .education .educlist::before{

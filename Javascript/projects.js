@@ -18,7 +18,7 @@ const myprojects = [
         title: "BOOKING HOTEL MANAGEMENT",
         desc: "Hotel Management System is a software application designed to streamline and automate various operations within the hospitality industry.",
         projectoverview: "Hotel Management System is a software application designed to streamline and automate various operations within the hospitality industry. It encompasses a range of functionalities, including reservation management, guest check-in and check-out processes, room allocation, billing and invoicing, inventory management, and reporting. By integrating these features into a single platform, the Hotel Management System enhances operational efficiency, improves guest experiences, and facilitates effective resource management for hotels and other lodging establishments. This system is developed using C# programming language for the application logic and MSSQL database for robust data storage and retrieval, ensuring reliability and scalability in managing hotel operations.",
-        featureinclude: ['Using dynamic user control for changing and updating product detail sales', 'Dashboaring tracking analyzing daily/monthly sales', 'Printing invoice receipt', 'Posting report sale by category'],
+        featureinclude: ['Categorization, inventory tracking, and assigning rooms', 'Search, filter, compare rooms, check real-time availability, and finalize reservations.', 'Generate insights on occupancy, revenue, and customer behavior', 'Guest profiles, booking history, loyalty programs, and feedback.'],
         image: "images/imageproj/imghotelbooking.png",
         date: "August2025 to September2025",
         team: "Solo",
