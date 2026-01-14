@@ -143,7 +143,7 @@ if(edubox){
 }
 
 function displayEducation(){
-    education.slice().reverse().forEach(edu => {
+    education.forEach(edu => {
         const edulist = document.createElement("div");
         edulist.classList.add("educlist");
         edulist.innerHTML = `
@@ -160,7 +160,7 @@ if(expbox){
 }
 
 function displayExperience(){
-    experience.slice().reverse().forEach(exp => {
+    experience.forEach(exp => {
         const explist = document.createElement("div");
         explist.classList.add("explist");
         explist.innerHTML = `

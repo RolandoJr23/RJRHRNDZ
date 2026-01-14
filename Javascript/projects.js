@@ -1,7 +1,7 @@
 const myprojects = [
     {
         id: 1,
-        techtools: ['C#', '.Net 8.0', 'MSSQL', 'GUNA.UI', 'WinForms.DataVisualization', 'CrystalReport'],
+        techtools: ['C#', '.Net 8.0', 'MSSQL', 'GUNA.UI', 'WinForms.DataVisualization'],
         title: "DYNAMIC USER CONTROL 'POINT OF SALES'",
         desc: "Point of Sales (POS) System in Modern UI/UX using Dynamic User Control for efficiency and reliable experience for improving accuracy, reduce error and improvise sales products.",
         projectoverview: "Point of Sales (POS) System is a combination of hardware and software that allows businesses to complete sales transactions. The hardware typically includes a computer and receipt printer. The software component manages sales data, inventory, customer information, and reporting. POS systems are commonly used in retail stores, restaurants, and other businesses to streamline the checkout process, track sales, and manage inventory efficiently. By automating these tasks, POS systems help businesses improve accuracy, reduce errors, and enhance overall operational efficiency. And this POS System is developed using C# programming language and MSSQL database for data storage and management. C# provides a robust and efficient platform for building the application's user interface and implementing business logic, while MSSQL offers a reliable and scalable solution for storing and retrieving data related to sales transactions, inventory, and customer information.",

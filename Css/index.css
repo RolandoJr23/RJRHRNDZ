@@ -767,12 +767,12 @@ body main #educationexperience #eduexpbox .education .educlist:hover{
 }
 body main #educationexperience #eduexpbox .education .educlist h2{
     font-family: 'Nata Sans';
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--top-content);
 }
 body main #educationexperience #eduexpbox .education .educlist h3{
     font-family: 'Nata Sans';
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--top-content);
 }
 
@@ -832,7 +832,7 @@ body main #educationexperience #eduexpbox .experience .explist:hover{
 }
 body main #educationexperience #eduexpbox .experience .explist h2{
     font-family: 'Nata Sans';
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--top-content);
 }
 body main #educationexperience #eduexpbox .experience .explist h3{
@@ -1121,6 +1121,9 @@ body footer h1{
     }
 
     /**********Navigation Links**********/
+    body nav ul{
+        width: 60%;
+    }
     body nav ul a{
         font-size: 1.3rem;
     }
@@ -1310,15 +1313,36 @@ body footer h1{
     }
 
     body main #educationexperience h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    body main #educationexperience #eduexpbox .education .educationlist{
+        height: 450px;
     }
 
     body main #educationexperience #eduexpbox .education .educlist::before{
-        right: calc(100% + 8px);
+        right: calc(100% + 5px);
+    }
+
+    body main #educationexperience #eduexpbox .education .educlist h2{
+        font-size: 1.5rem;
+    }
+    body main #educationexperience #eduexpbox .education .educlist h3{
+        font-size: 1rem;
+    }
+
+    body main #educationexperience #eduexpbox .education .experiencelist{
+        height: 450px;
     }
 
     body main #educationexperience #eduexpbox .experience .explist::before{
-        right: calc(100% + 8px);
+        right: calc(100% + 5px);
+    }
+    body main #educationexperience #eduexpbox .experience .explist h2{
+        font-size: 1.5;
+    }
+    body main #educationexperience #eduexpbox .experience .explist h3{
+        font-size: 1rem;
     }
 
     /**********Contacts**********/
@@ -1488,10 +1512,10 @@ body footer h1{
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
     }
     body main #educationexperience #eduexpbox .education .educlist h2{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     body main #educationexperience #eduexpbox .education .educlist h3{
-        font-size: .8rem;
+        font-size: .9rem;
     }
 
     /**********Experience**********/
@@ -1505,10 +1529,10 @@ body footer h1{
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
     }
     body main #educationexperience #eduexpbox .experience .explist h2{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     body main #educationexperience #eduexpbox .experience .explist h3{
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
 
