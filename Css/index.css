@@ -1666,7 +1666,7 @@ body footer h1{
         /* border: 1px solid red; */
     }
     body main #Aboutme h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     body main #Aboutme h3{
         font-size: 1rem;
@@ -1878,7 +1878,7 @@ body footer h1{
         /* border: 1px solid red; */
     }
     body nav ul a{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     body nav .navicon .fa-bars{
@@ -1939,7 +1939,7 @@ body footer h1{
         height: 250px;
     }
     body main #Aboutme aside #myjourney h2{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     body main #Aboutme aside #myjourney h3{
         font-size: .8rem;
@@ -1949,7 +1949,7 @@ body footer h1{
         height: 250px;
     }
     body main #Aboutme aside #myapproach h2{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     body main #Aboutme aside #myapproach h3{
         font-size: .8rem;
@@ -2035,6 +2035,10 @@ body footer h1{
         height: 1000px;
     } 
 
+    body main #contacts h1{
+        font-size: 1.5rem;
+    }
+
     /**********Form Message Email**********/
     body main #contacts form input{
         width: 38%;
@@ -2066,7 +2070,7 @@ body footer h1{
     /**********Navigation Unordered List**********/
     
     body nav ul a{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     /************************************Header************************************/
@@ -2107,7 +2111,7 @@ body footer h1{
     }
     /**********Passionate**********/
     body header .wrappersonalinfo .passionate{
-        font-size: .6rem;
+        font-size: .7rem;
     }
 
     /**********About Me**********/
@@ -2115,7 +2119,7 @@ body footer h1{
         height: 950px;
     }
     body main #Aboutme h1{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     body main #Aboutme h3{
         font-size: .8rem;
@@ -2129,7 +2133,7 @@ body footer h1{
         height: 310px;
     }
     body main #Aboutme aside #myjourney h2{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     body main #Aboutme aside #myjourney h3{
         font-size: .8rem;
@@ -2139,7 +2143,7 @@ body footer h1{
         height: 310px;
     }
     body main #Aboutme aside #myapproach h2{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     body main #Aboutme aside #myapproach h3{
         font-size: .8rem;
@@ -2150,7 +2154,7 @@ body footer h1{
         height: 750px;
     }
     body main #corecompetencies h1{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     /**********Cores**********/
     body main #corecompetencies #core .corebox{
@@ -2177,7 +2181,7 @@ body footer h1{
         height: 1300px;
     }
     body main #educationexperience h1{
-        font-size: 1.2rem;
+        font-size: 1.rem;
     }
     body main #educationexperience h2{
         font-size: .8rem;

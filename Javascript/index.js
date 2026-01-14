@@ -57,15 +57,15 @@ hamMenu.addEventListener("click", () => {
 const typedJS = window.Typed;
 
 const typedMotivate = new Typed('#auto-typed', {
-    strings: ['BRAVE', 'UNIQUE', 'HUMBLE', 'ACCEPTABLE', 'MINDFUL', 'YOUSELF.'],
+    strings: ['BRAVE', 'HUMBLE', 'ACCEPTABLE', 'UNIQUE', 'MINDFUL', 'YOUSELF.'],
     typeSpeed: 150,
-    backSpeed: 200,
+    backSpeed: 100,
     loop: true
 });
 const typedPassionate = new Typed('#auto-typed-passionate', {
     strings: ['SOFTWARE ENGINEER', 'AI ENGINEER', 'FULL STACK DEV', 'AUTOMATION DEV', 'DATA SCIENCE', 'DATA ANALYST'],
     typeSpeed: 150,
-    backSpeed: 200,
+    backSpeed: 100,
     loop: true
 });
 
