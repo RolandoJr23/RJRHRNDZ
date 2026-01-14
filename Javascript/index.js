@@ -57,7 +57,7 @@ hamMenu.addEventListener("click", () => {
 const typedJS = window.Typed;
 
 const typedMotivate = new Typed('#auto-typed', {
-    strings: ['BRAVE', 'UNIQUE', 'ACCEPTABLE', 'MINDFUL', 'YOUSELF.'],
+    strings: ['BRAVE', 'UNIQUE', 'HUMBLE', 'ACCEPTABLE', 'MINDFUL', 'YOUSELF.'],
     typeSpeed: 150,
     backSpeed: 200,
     loop: true
