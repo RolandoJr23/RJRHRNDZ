@@ -16,6 +16,8 @@
 html{
     scroll-behavior: smooth;
     scroll-padding: var(--scroll-padding, 5rem);
+    container-type: scroll-state;
+    container-name: page;
 }
 
 /************************************ScrollBar Change Color************************************/
@@ -519,6 +521,39 @@ body main .projectsdetail .projCategory .wrapboxprojCategory .category{
     color: var(--top-content);
 }
 
+/**********Back to Top Button**********/
+body main .back-to-top{
+    position: fixed;
+    bottom: 8rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background: var(--top-content);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, .5);
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    z-index: 100;
+
+    /* Hidden by default = slides in from right */
+    translate: 80px 0;
+    transition: translate .5s ease, background 0.2s;
+}
+body main .back-to-top:hover{
+    filter: drop-shadow( 1px 1px 3px white);
+}
+
+/* Scroll-State: Show button when page can be scrolled up */
+@container page (scroll-state(scrollable: top)){
+    body main .back-to-top{
+        translate: 0 0;
+    }
+}
+
 
 /************************************Footer************************************/
 body footer{
@@ -537,8 +572,6 @@ body footer h1{
     filter: drop-shadow(1px 1px 3px white);
     color: white;
 }
-
-
 
 
 
@@ -793,6 +826,10 @@ body footer h1{
     body main .projectsdetail h1{
         font-size: 1.5rem;
     }
+
+    body main .back-to-top{
+        right: 1rem;
+    }
 }
 
 @media (max-width: 480px){
@@ -890,6 +927,12 @@ body footer h1{
     body main .projectsdetail .projCategory .wrapboxprojCategory .category{
         font-size: .6rem;
     }
+
+    body main .back-to-top{
+        right: 1rem;
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 360px){
@@ -898,5 +941,9 @@ body footer h1{
     }
     body header .projectsname .techtools li{
         font-size: .6rem;
+    }
+    body main .back-to-top{
+        bottom: 6.5rem;
+        right: .6rem;
     }
 }
