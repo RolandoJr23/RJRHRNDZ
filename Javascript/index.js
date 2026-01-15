@@ -78,7 +78,8 @@ const aside = document.querySelector("aside");
 const thirdSection = document.querySelector("#corecompetencies");
 const fourthSection = document.querySelector("#myprojects");
 const fifthSection = document.querySelector("#educationexperience");
-const sixthSection = document.querySelector("#contacts");
+const sixthSection = document.querySelector("#wordmotivation");
+const seventhSection = document.querySelector("#contacts");
 
 const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting){
@@ -97,6 +98,7 @@ observer.observe(thirdSection)
 observer.observe(fourthSection)
 observer.observe(fifthSection)
 observer.observe(sixthSection)
+observer.observe(seventhSection)
 
 
 // ************************************Display All Projects************************************

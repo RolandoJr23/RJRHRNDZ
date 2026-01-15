@@ -3,8 +3,6 @@
 :root{
     --text-color: white;
     --top-content: #2F4F4F;
-    --body-content: #778899;
-    --footer-content: #000000;
 }
 
 *{
@@ -841,7 +839,38 @@ body main #educationexperience #eduexpbox .experience .explist h3{
     color: var(--top-content);
 }
 
-
+/**********Word Motivation**********/
+body main #wordmotivation{
+    width: 100%;
+    height: 400px;
+    background-color: var(--top-content);
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 800ms ease;
+}
+body main #wordmotivation.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+body main #wordmotivation .wrapword{
+    width: 100%;
+    text-align: center;
+}
+body main #wordmotivation .wrapword h1{
+    font-family: 'Nata Sans';
+    font-size: 2.5rem;
+    font-weight: 300;
+    filter: drop-shadow( 1px 1px 3px white);
+    color: white;
+    text-transform: uppercase;
+}
+body main #wordmotivation .wrapword h1 span{
+    font-size: 1.5rem;
+}
 
 /**********Contacts**********/
 body main #contacts{
@@ -1196,9 +1225,6 @@ body footer h1{
         font-weight: 600;
     }
 
-
-
-
     /**********Education & Experience**********/
     body main #educationexperience{
         width: 80%;
@@ -1212,7 +1238,13 @@ body footer h1{
         right: calc(100% + 12px);
     }
 
-    
+    /**********Word Motivation**********/
+    body main #wordmotivation .wrapword h1{
+        font-size: 2rem;
+    }
+    body main #wordmotivation .wrapword h1 span{
+        font-size: 1rem;
+    }
 
     /**********Contacts**********/
     body main #contacts{
@@ -1342,6 +1374,14 @@ body footer h1{
         font-size: 1.5;
     }
     body main #educationexperience #eduexpbox .experience .explist h3{
+        font-size: 1rem;
+    }
+
+    /**********Word Motivation**********/
+    body main #wordmotivation .wrapword h1{
+        font-size: 1.5rem;
+    }
+    body main #wordmotivation .wrapword h1 span{
         font-size: 1rem;
     }
 
@@ -1487,8 +1527,6 @@ body footer h1{
         width: 23%;
     }
 
-
-
     /**********Education & Experience**********/
     body main #educationexperience{
         width: 90%;
@@ -1535,8 +1573,16 @@ body footer h1{
         font-size: 1rem;
     }
 
-
-
+    /**********Word Motivation**********/
+    body main #wordmotivation{
+        height: 200px;
+    }
+    body main #wordmotivation .wrapword h1{
+        font-size: 1.2rem;
+    }
+    body main #wordmotivation .wrapword h1 span{
+        font-size: 1rem;
+    }
 
     /**********Contacts**********/
     body main #contacts{
@@ -1690,7 +1736,7 @@ body footer h1{
         height: 280px;
     }
     body main #Aboutme aside #myapproach h2{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     body main #Aboutme aside #myapproach h3{
         font-size: 1rem;
@@ -1712,7 +1758,7 @@ body footer h1{
         /* border: 1px solid red; */
     }
     body main #corecompetencies #core .corebox h1{
-        font-size: 1rem;
+        font-size: .8rem;
     }
     body main #corecompetencies #core .corebox h3{
         font-size: .8rem;
@@ -1795,7 +1841,17 @@ body footer h1{
         right: calc(100% + 8px);
     }
 
-
+    /**********Word Motivation**********/
+    body main #wordmotivation .wrapword{
+        width: 90%;
+        text-align: center;
+    }
+    body main #wordmotivation .wrapword h1{
+        font-size: 1rem;
+    }
+    body main #wordmotivation .wrapword h1 span{
+        font-size: .8rem;
+    }
 
     /**********Contacts**********/
     body main #contacts{
