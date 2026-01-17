@@ -1,9 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --text-color: white;
+    /* --text-color: white; */
     --top-content: #2F4F4F;
+    --font-detail: #2F4F4F;
+    --header-details: white;
+    --main-background: white;
+    --box-shadow: rgba(73, 52, 52, 0.12);
+    --nav-background: #2F4F4F;
 }
+
+/************************************Dark Mode************************************/
+.darkmode{
+    /* --text-color: white; */
+    --top-content: #2B2A2A;
+    --font-detail: whitesmoke;
+    --main-background: #2B2A2A;
+    --box-shadow: rgba(109, 104, 104, 0.12);
+    --nav-background: #1a1818;
+}
+
+#theme-switch{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgba(155, 148, 148, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 25px;
+    right: 80px;
+}
+#theme-switch i{
+    font-size: 1rem;
+    color: var(--header-details);
+}
+#theme-switch i:last-child{
+    display: none;
+}
+.darkmode #theme-switch i:first-child{
+    display: none;
+}
+.darkmode #theme-switch i:last-child{
+    display: block;
+}
+
 
 *{
     margin: 0px;
@@ -44,7 +88,7 @@ body nav{
     max-width: 100%;
     height: 100px;
     z-index: 100;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     display: flex;
     align-items: center;
     /* box-shadow: 0px 0px 10px 0px white; */
@@ -53,7 +97,7 @@ body nav{
 }
 
 body nav.scrolled{
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 6px var(--box-shadow);
 }
 /**********LOGO**********/
 body nav #rjrlogo{
@@ -80,7 +124,6 @@ body nav h1 span{
     /* filter: drop-shadow( 1px 1px 3px white); */
 }
 body nav h1:hover{
-    
     transform: scale(1.1);
     filter: drop-shadow( 1px 1px 3px white);
 }
@@ -105,7 +148,7 @@ body nav ul a{
     font-size: 1.5rem;
     filter: drop-shadow(1px 1px 3px white); 
     text-decoration: none;
-    color: var(--text-color);    
+    color: var(--header-details);    
     height: 40px;
     position: relative;
 }
@@ -128,6 +171,25 @@ body nav ul .nav-item{
     position: relative;
     width: 30px;
     height: 40px;
+    position: relative;
+}
+body nav ul .nav-item::after{
+    position: absolute;
+    content: '';
+    background-color: white;
+    border-radius: 30px;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+}
+body nav ul .nav-item:hover::after{
+    width: 100%;
+}
+
+body nav ul .nav-item .fa-file{
+    font-size: 1.5rem;
 }
 
 body nav ul .nav-item #resumeicon{
@@ -149,7 +211,7 @@ body nav ul .nav-item #resumeicon{
     padding: 4px 10px;
     border-radius: 5px;
     background-color: white;
-    color: var(--top-content);
+    color: var(--nav-background);
     font-family: 'Nata Sans';
     transition: opacity .3s linear;
 }
@@ -170,11 +232,11 @@ body nav .navicon{
     right: 100px;
     display: none;
 }
-body nav .navicon .fa-bars{
+/* body nav .navicon .fa-file{
     cursor: pointer;
     color: white;
-    font-size: 2rem;
-}
+    font-size: 3rem;
+} */
 
 body nav .navicon .fa-bars:hover{
     filter: drop-shadow(1px 1px 3px white);
@@ -228,7 +290,7 @@ body header{
     max-width: 100%;
     height: 990px;
     position: relative;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     transform: -50%;
     opacity: 0;
     transition: 800ms ease;
@@ -260,7 +322,7 @@ body header .wrappersonalinfo{
 
 /**********My Quote**********/
 body header .wrappersonalinfo .quote{
-    color: var(--text-color);
+    color: var(--header-details);
     font-size: 7.5rem;
     font-family: 'Nata Sans';
     font-weight: 400;
@@ -270,7 +332,7 @@ body header .wrappersonalinfo .quote{
 
 /**********My Name**********/
 body header .wrappersonalinfo .myname{
-    color: var(--text-color);
+    color: var(--header-details);
     font-size: 4rem;
     font-family: 'Nata Sans';
     font-weight: 300;
@@ -279,7 +341,7 @@ body header .wrappersonalinfo .myname{
 
 /**********My Course**********/
 body header .wrappersonalinfo .mycourse{
-    color: var(--text-color);
+    color: var(--header-details);
     font-size: 2.2rem;
     font-family: 'Nata Sans';
     font-weight: 200;
@@ -290,7 +352,7 @@ body header .wrappersonalinfo .mycourse{
 
 /**********Passionate**********/
 body header .wrappersonalinfo .passionate{
-    color: var(--text-color);
+    color: var(--header-details);
     font-size: 3.3rem;
     font-family: 'Nata Sans';
     font-weight: 200;
@@ -304,6 +366,7 @@ body header .wrappersonalinfo .passionate span{
 /************************************Main**********************************/
 body main{
     max-width: 100%;
+    background-color: var(--main-background);
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -333,14 +396,14 @@ body main #Aboutme h1{
     font-family: 'Nata Sans';
     font-size: 3rem;
     text-transform: uppercase;
-    color: var(--top-content);
+    color: var(--font-detail);
     margin-bottom: 20px;
 }
 body main #Aboutme h3{
     font-family: 'Nata Sans';
     font-size: 1.2rem;
     text-align: center;
-    color: var(--top-content);
+    color: var(--font-detail);
 }
 
 body main #Aboutme aside{
@@ -373,13 +436,13 @@ body main #Aboutme aside #myjourney h2{
     font-family: 'Nata Sans';
     font-size: 2.5rem;
     text-transform: uppercase;
-    color: var(--top-content);
+    color: var(--font-detail);
 }
 body main #Aboutme aside #myjourney h3{
     font-family: 'Nata Sans';
     font-size: 1.2rem;
     text-align: justify;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-indent: 50px;
     margin-top: 20px;
 }
@@ -397,13 +460,13 @@ body main #Aboutme aside #myapproach h2{
     font-family: 'Nata Sans';
     font-size: 2.5rem;
     text-transform: uppercase;
-    color: var(--top-content);
+    color: var(--font-detail);
 }
 body main #Aboutme aside #myapproach h3{
     font-family: 'Nata Sans';
     font-size: 1.2rem;
     text-align: justify;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-indent: 50px;
     margin-top: 20px;
 }
@@ -431,7 +494,7 @@ body main #corecompetencies h1{
     font-family: 'Nata Sans';
     font-size: 3rem;
     text-transform: uppercase;
-    color: var(--top-content);
+    color: var(--font-detail);
 }
 body main #corecompetencies h1 i{
     padding-right: 10px;
@@ -505,9 +568,8 @@ body main #myprojects.show{
 body main #myprojects h1{
     font-family: 'Nata Sans';
     font-size: 3rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
-    filter: drop-shadow(1px 1px 3px white);
     margin-top: 30px;
 }
 body main #myprojects h2{
@@ -687,7 +749,7 @@ body main #educationexperience.show{
 body main #educationexperience h1{
     font-family: 'Nata Sans';
     font-size: 3rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -695,7 +757,7 @@ body main #educationexperience .txteducexp{
     text-align: center;
     font-family: 'Nata Sans';
     font-size: 1rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -723,7 +785,7 @@ body main #educationexperience #eduexpbox .education{
 body main #educationexperience #eduexpbox .education h1{
     font-family: 'Nata Sans';
     font-size: 2rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
     margin-top: 10px;
 }
@@ -788,7 +850,7 @@ body main #educationexperience #eduexpbox .experience{
 body main #educationexperience #eduexpbox .experience h1{
     font-family: 'Nata Sans';
     font-size: 2rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
     margin-top: 10px;
 }
@@ -845,7 +907,7 @@ body main #educationexperience #eduexpbox .experience .explist h3{
 body main #wordmotivation{
     width: 100%;
     height: 400px;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     margin-bottom: 100px;
     display: flex;
     justify-content: center;
@@ -896,7 +958,7 @@ body main #contacts h1{
     font-family: 'Nata Sans';
     /* font-weight: 400; */
     font-size: 3rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
     margin-top: 10px;
 }
@@ -904,7 +966,7 @@ body main #contacts h2{
     font-family: 'Nata Sans';
     /* font-weight: 400; */
     font-size: 1rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
     text-align: center;
     margin-top: 10px;
@@ -927,7 +989,7 @@ body main #contacts form{
 body main #contacts form input{
     font-family: 'Nata Sans';
     font-size: 1rem;
-    color: var(--top-content);
+    color: var(--nav-background);
     border-radius: 10px;
     width: 45%;
     height: 40px;
@@ -949,7 +1011,7 @@ body main #contacts form button{
     cursor: pointer;
     width: 97%;
     height: 50px;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     border-radius: 10px;
     border: none;
     color: white;
@@ -970,7 +1032,7 @@ body main #contacts #contactdetails{
 body main #contacts #contactdetails .socialmedia{
     width: 50%;
     height: 170px;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -1024,7 +1086,7 @@ body main #contacts #contactdetails .mediaicon i:hover{
 body main #contacts #contactdetails .emailaddress{
     width: 50%;
     height: 170px;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -1140,8 +1202,8 @@ body main .back-to-top{
     z-index: 100;
 
     /* Hidden by default = slides in from right */
-    translate: 80px 0;
-    transition: translate .5s ease, background 0.2s;
+    transform: translateX(80px);
+    transition: transform .5s ease, background 0.2s;
 }
 body main .back-to-top:hover{
     filter: drop-shadow( 1px 1px 3px white);
@@ -1150,13 +1212,13 @@ body main .back-to-top:hover{
 /* Scroll-State: Show button when page can be scrolled up */
 @container page (scroll-state(scrollable: top)){
     body main .back-to-top{
-        translate: 0 0;
+        transform: translateX(0);
     }
 }
 
 /************************************Footer************************************/
 body footer{
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     height: 100px;
     display: flex;
     justify-content: center;
@@ -1460,8 +1522,14 @@ body footer h1{
         display: none;
     }
 
+    #theme-switch{
+        top: 20px;
+        right: 100px;
+    }
+
     body nav .ham-menu{
         top: 25px;
+        right: 50px;
         display: block;
     }
 
@@ -2165,6 +2233,17 @@ body footer h1{
     
     body nav ul a{
         font-size: 1.3rem;
+    }
+
+    #theme-switch{
+        top: 20px;
+        right: 65px;
+    }
+
+    body nav .ham-menu{
+        top: 25px;
+        right: 25px;
+        display: block;
     }
 
     /************************************Header************************************/

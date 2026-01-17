@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --text-color: white;
+    /* --text-color: white; */
     --top-content: #2F4F4F;
+    --font-detail: #2F4F4F;
+    --header-details: white;
+    --main-background: white;
+    --box-shadow: rgba(73, 52, 52, 0.12);
+    --nav-background: #2F4F4F;
+}
+
+/************************************Dark Mode************************************/
+.darkmode{
+    /* --text-color: white; */
+    --top-content: #2B2A2A;
+    --font-detail: whitesmoke;
+    --main-background: #2B2A2A;
+    --box-shadow: rgba(109, 104, 104, 0.12);
+    --nav-background: #1a1818;
 }
 
 *{
@@ -10,6 +25,44 @@
     padding: 0px;
     box-sizing: 0px;
     list-style: none;
+}
+
+/************************************Dark Mode************************************/
+.darkmode{
+    /* --text-color: white; */
+    --top-content: #2B2A2A;
+    --font-detail: whitesmoke;
+    --main-background: #2B2A2A;
+    --box-shadow: rgba(109, 104, 104, 0.12);
+    --nav-background: #1a1818;
+}
+
+#theme-switch{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgba(155, 148, 148, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 25px;
+    right: 80px;
+}
+#theme-switch i{
+    font-size: 1rem;
+    color: var(--header-details);
+}
+#theme-switch i:last-child{
+    display: none;
+}
+.darkmode #theme-switch i:first-child{
+    display: none;
+}
+.darkmode #theme-switch i:last-child{
+    display: block;
 }
 
 /************************************Scroll Behavior Smooth************************************/
@@ -44,7 +97,7 @@ body nav{
     max-width: 100%;
     height: 100px;
     z-index: 100;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     /* border: 1px solid red; */
     display: flex;
     align-items: center;
@@ -54,7 +107,7 @@ body nav{
 }
 
 body nav.scrolled{
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 6px var(--box-shadow);
 }
 /**********LOGO**********/
 body nav #rjrlogo{
@@ -72,7 +125,7 @@ body nav h1{
     font-family: 'Nata Sans';
     font-size: 2rem;
     font-weight: 500;
-    color: white;
+    color: var(--header-details);
     margin-left: 200px;
     transition: .3s;
 }
@@ -105,7 +158,7 @@ body nav ul a{
     font-size: 1.5rem;
     filter: drop-shadow(1px 1px 3px white);
     text-decoration: none;
-    color: var(--text-color);    
+    color: var(--header-details);    
     height: 40px;
 }
 body nav ul a::after{
@@ -148,7 +201,7 @@ body nav ul .nav-item #resumeicon{
     padding: 4px 10px;
     border-radius: 5px;
     background-color: white;
-    color: var(--top-content);
+    color: var(--nav-background);
     font-family: 'Nata Sans';
     transition: opacity .3s linear;
 }
@@ -227,7 +280,7 @@ body header{
     max-width: 100%;
     min-height: 500px;
     position: relative;
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     /* border: 1px solid red; */
     transform: -50%;
     opacity: 0;
@@ -272,7 +325,7 @@ body header .projectsname button i:hover{
 
 body header .projectsname .title{
     font-size: 3rem;
-    color: white;
+    color: var(--font-detail);
     font-family: 'Nata Sans';
     font-weight: 400;
     filter: drop-shadow(1px 1px 10px white);
@@ -283,7 +336,7 @@ body header .projectsname .title{
 
 body header .projectsname .description{
     font-size: 1rem;
-    color: white;
+    color: var(--font-detail);
     font-family: 'Nata Sans';
     font-weight: 400;
     text-align: center;
@@ -323,8 +376,9 @@ body main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: var(--main-background);
     /* border: 1px solid red; */
     gap: 50px;
 }
@@ -353,7 +407,7 @@ body main .projoverview h1{
     font-size: 2rem;
     font-family: 'Nata Sans';
     font-weight: 600;
-    color: var(--top-content);
+    color: var(--font-detail);
     margin-top: 20px;
 }
 
@@ -363,7 +417,7 @@ body main .projoverview .overview{
     font-weight: 500;
     text-align: justify;
     text-indent: 50px;
-    color: var(--top-content);
+    color: var(--font-detail);
     margin-top: 20px;
     margin-bottom: 20px;
     /* border: 1px solid red; */
@@ -373,13 +427,13 @@ body main .projoverview .featureinclude h2{
     font-size: 1.5rem;
     font-family: 'Nata Sans';
     font-weight: 600;
-    color: var(--top-content);
+    color: var(--font-detail);
 }
 body main .projoverview .featureinclude .feature-list li{
     font-size: 1.3rem;
     font-family: 'Nata Sans';
     font-weight: 400;
-    color: var(--top-content);
+    color: var(--font-detail);
 }
 
 /******************Project Details******************/
@@ -557,7 +611,7 @@ body main .back-to-top:hover{
 
 /************************************Footer************************************/
 body footer{
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     height: 100px;
     display: flex;
     justify-content: center;
@@ -694,8 +748,14 @@ body footer h1{
         display: none;
     }
 
+    #theme-switch{
+        top: 20px;
+        right: 100px;
+    }
+
     body nav .ham-menu{
         top: 25px;
+        right: 50px;
         display: block;
     }
 
@@ -936,6 +996,16 @@ body footer h1{
 }
 
 @media (max-width: 360px){
+    #theme-switch{
+        top: 20px;
+        right: 65px;
+    }
+
+    body nav .ham-menu{
+        top: 25px;
+        right: 25px;
+        display: block;
+    }
     body header .projectsname .title{
         margin-top: 100px;
     }
