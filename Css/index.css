@@ -26,7 +26,7 @@
     width: 40px;
     padding: 0;
     border-radius: 50%;
-    background-color: rgba(155, 148, 148, 0.12);
+    background-color: var(--box-shadow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +77,7 @@ html{
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    border: 1px solid rgb(118, 171, 174);
+    border: 1px solid var(--box-shadow);
     background-color: var(--top-content);
 }
 
@@ -134,7 +134,7 @@ body nav ul{
     position: absolute;
     width: 50%;
     height: 70px;
-    right: 20px;
+    right: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,20 +172,6 @@ body nav ul .nav-item{
     width: 30px;
     height: 40px;
     position: relative;
-}
-body nav ul .nav-item::after{
-    position: absolute;
-    content: '';
-    background-color: white;
-    border-radius: 30px;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    transition: .5s;
-}
-body nav ul .nav-item:hover::after{
-    width: 100%;
 }
 
 body nav ul .nav-item .fa-file{
@@ -575,7 +561,7 @@ body main #myprojects h1{
 body main #myprojects h2{
     font-family: 'Nata Sans';
     font-size: 1rem;
-    color: var(--top-content);
+    color: var(--font-detail);
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -1248,9 +1234,14 @@ body footer h1{
     /**********Navigation Links**********/
     body nav ul{
         width: 60%;
+        right: 100px;
     }
     body nav ul a{
         font-size: 1.3rem;
+    }
+
+    #theme-switch{
+        right: 50px;
     }
 
     /************************************Header************************************/
@@ -1370,8 +1361,18 @@ body footer h1{
 /*****************Desktop Screen ViewSize*****************/
 @media (max-width: 1240px){
     /**********Navigation Links**********/
+    body nav ul{
+        right: 50px;
+        gap: 30px;
+    }
     body nav ul a{
+        height: 30px;
         font-size: 1rem;
+    }
+
+    #theme-switch{
+        top: 25px;
+        right: 40px;
     }
 
     /************************************Header************************************/
@@ -2222,8 +2223,8 @@ body footer h1{
 
     body main .back-to-top{
         right: 1rem;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }
 

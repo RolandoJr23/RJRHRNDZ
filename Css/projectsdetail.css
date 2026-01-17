@@ -86,7 +86,7 @@ html{
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    border: 1px solid rgb(118, 171, 174);
+    border: 1px solid var(--box-shadow);
     background-color: var(--top-content);
 }
 
@@ -143,7 +143,7 @@ body nav ul{
     position: absolute;
     width: 50%;
     height: 70px;
-    right: 20px;
+    right: 50px;
     /* border: 1px solid red; */
     display: flex;
     align-items: center;
@@ -180,6 +180,10 @@ body nav ul .nav-item{
     position: relative;
     width: 30px;
     height: 40px;
+}
+
+body nav ul .nav-item .fa-file{
+    font-size: 1.5rem;
 }
 
 body nav ul .nav-item #resumeicon{
@@ -439,7 +443,7 @@ body main .projoverview .featureinclude .feature-list li{
 /******************Project Details******************/
 body main .projectsdetail{
     width: 20%;
-    height: 400px;
+    height: 500px;
     background-color: whitesmoke;
     border-radius: 20px;
     display: flex;
@@ -575,6 +579,50 @@ body main .projectsdetail .projCategory .wrapboxprojCategory .category{
     color: var(--top-content);
 }
 
+
+/******************Project Link******************/
+body main .projectsdetail .projLink{
+    width: 70%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+body main .projectsdetail .projLink i{
+    font-size: 2rem;
+    color: var(--top-content);
+    align-content: center;
+    /* border: 1px solid red; */
+}
+
+body main .projectsdetail .projLink .wrapboxprojLink{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+}
+
+body main .projectsdetail .projLink .wrapboxprojLink label{
+    font-size: 1.5rem;
+    font-family: 'Nata Sans';
+    font-weight: 500;
+    color: var(--top-content);
+}
+
+body main .projectsdetail .projLink .wrapboxprojLink .link{
+    font-size: 1rem;
+    font-family: 'Nata Sans';
+    font-weight: 300;
+    color: var(--top-content);
+}
+
+body main .projectsdetail .projLink .wrapboxprojLink .link .githubrepo{
+    color: var(--top-content);
+    text-decoration: none;
+}
+
 /**********Back to Top Button**********/
 body main .back-to-top{
     position: fixed;
@@ -635,9 +683,17 @@ body footer h1{
 
 /************************************Responsive Media Query************************************/
 @media (max-width: 1640px){
-        /**********Navigation Links**********/
+    /**********Navigation Links**********/
+    body nav ul{
+        width: 60%;
+        right: 50px;
+    }
     body nav ul a{
         font-size: 1.3rem;
+    }
+
+    #theme-switch{
+        right: 60px;
     }
     
     /************************************Main************************************/
@@ -669,7 +725,7 @@ body footer h1{
         position: absolute;
         width: 50%;
         height: 70px;
-        right: 20px;
+        right: 100px;
         /* border: 1px solid red; */
         display: flex;
         align-items: center;
@@ -711,7 +767,7 @@ body footer h1{
 
     body main .projectsdetail{
         width: 30%;
-        height: 400px;
+        height: 480px;
     }  
 }
 
@@ -803,7 +859,7 @@ body footer h1{
     /******************Project Details******************/
     body main .projectsdetail{
         width: 30%;
-        height: 400px;
+        height: 480px;
     }
     body main .projectsdetail h1{
         font-size: 1.5rem;
@@ -881,7 +937,7 @@ body footer h1{
     /******************Project Details******************/
     body main .projectsdetail{
         width: 70%;
-        height: 380px;
+        height: 480px;
     }
     body main .projectsdetail h1{
         font-size: 1.5rem;
@@ -985,13 +1041,13 @@ body footer h1{
         font-size: 1rem;
     }
     body main .projectsdetail .projCategory .wrapboxprojCategory .category{
-        font-size: .6rem;
+        font-size: 1rem;
     }
 
     body main .back-to-top{
         right: 1rem;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }
 

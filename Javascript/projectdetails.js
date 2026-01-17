@@ -105,6 +105,7 @@ function displayProjectsDetails(){
     const overView = document.querySelector(".overview");
     const date = document.querySelector(".date");
     const team = document.querySelector(".team");
+    const link = document.querySelector(".link");
     const category = document.querySelector(".category");
 
     const featurelist = document.querySelector(".feature-list");
@@ -121,12 +122,6 @@ function displayProjectsDetails(){
     projImage.innerHTML = `
         <img src="${proj.image}">
     `;
-    
-    overView.textContent = proj.projectoverview;
-    date.textContent = proj.date;
-    team.textContent = proj.team;
-
-    category.textContent = proj.category
 
     featurelist.innerHTML = `
         <ol>
@@ -135,6 +130,14 @@ function displayProjectsDetails(){
             <li>• ${proj.featureinclude[2]}</li>
             <li>• ${proj.featureinclude[3]}</li>
         </ol>
+    `;
+    
+    overView.textContent = proj.projectoverview;
+    date.textContent = proj.date;
+    team.textContent = proj.team;
+    category.textContent = proj.category
+    link.innerHTML = `
+        <a class="githubrepo" href="${proj.githublink}" target="_blank">Github Repository</a>   
     `;
 }
 
