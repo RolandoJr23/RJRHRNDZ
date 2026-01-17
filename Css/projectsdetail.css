@@ -325,7 +325,7 @@ body header .projectsname button i:hover{
 
 body header .projectsname .title{
     font-size: 3rem;
-    color: var(--font-detail);
+    color: var(--header-details);
     font-family: 'Nata Sans';
     font-weight: 400;
     filter: drop-shadow(1px 1px 10px white);
@@ -336,7 +336,7 @@ body header .projectsname .title{
 
 body header .projectsname .description{
     font-size: 1rem;
-    color: var(--font-detail);
+    color: var(--header-details);
     font-family: 'Nata Sans';
     font-weight: 400;
     text-align: center;
@@ -450,7 +450,7 @@ body main .projectsdetail{
 }
 body main .projectsdetail:hover{
     transform: translateY(-10px);
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 body main .projectsdetail h1{
     font-size: 2rem;

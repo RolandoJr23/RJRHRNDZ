@@ -795,7 +795,7 @@ body main #educationexperience #eduexpbox .education .educationlist{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 3px solid var(--top-content);
+    border-left: 3px solid var(--nav-background);
     padding: 10px;
     gap: 10px;
 }
@@ -821,7 +821,7 @@ body main #educationexperience #eduexpbox .education .educlist::before{
     height: 20px;
     top: calc(50% + -10px);
     right: calc(100% + 13px);
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     border-radius: 50%;
 }
 body main #educationexperience #eduexpbox .education .educlist:hover{
@@ -860,7 +860,7 @@ body main #educationexperience #eduexpbox .experience .experiencelist{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 3px solid var(--top-content);
+    border-left: 3px solid var(--nav-background);
     scrollbar-width: thin;
     padding: 10px;
     gap: 10px;
@@ -886,7 +886,7 @@ body main #educationexperience #eduexpbox .experience .explist::before{
     height: 20px;
     top: calc(50% + -10px);
     right: calc(100% + 13px);
-    background-color: var(--top-content);
+    background-color: var(--nav-background);
     border-radius: 50%;
 }
 body main #educationexperience #eduexpbox .experience .explist:hover{
